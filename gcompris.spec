@@ -1,13 +1,13 @@
-%define		_rc	RC3
+%define		_subv	1
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
 Version:	6.3
-Release:	0.%{_rc}.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}%{_rc}.tar.gz
-# Source0-md5:	0be1f9d685a81bbfb081e5739925086a
+Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}-%{_subv}.tar.gz
+# Source0-md5:	943821de6703e7547a8a40a0b9d05513
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-python-lib.patch
 Patch2:		%{name}-desktop.patch
@@ -474,7 +474,7 @@ Pakiet zawiera flagi pañstw w formacie png 60x40 oraz plik opisu
 assetml.
 
 %prep
-%setup -q -n %{name}-%{version}%{_rc}
+%setup -q
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
