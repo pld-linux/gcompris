@@ -30,8 +30,8 @@ diff -urN gcompris-6.1.orig/gcompris-edit.desktop.in gcompris-6.1.new/gcompris-e
  StartupNotify=true
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=gcompris
---- gcompris-6.1.orig/gcompris.desktop.in.in	Tue Jul 27 20:31:03 2004
-+++ gcompris-6.1.new/gcompris.desktop.in.in	Tue Jul 27 20:31:03 2004
+--- gcompris-6.1.orig/gcompris.desktop.in	Tue Jul 27 20:31:03 2004
++++ gcompris-6.1.new/gcompris.desktop.in	Tue Jul 27 20:31:03 2004
 @@ -6,7 +6,7 @@
  Icon=gcompris.png
  Terminal=false
