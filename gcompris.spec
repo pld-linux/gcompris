@@ -1,12 +1,13 @@
-Summary:	Educational suite for kids 3-10 years old
-Summary(pl):	Zestaw edukacyjny dla dzieci w wieku 3-10 lat
+%define		_rc	RC1
+Summary:	Educational suite for kids 2-10 years old
+Summary(pl):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
-Version:	6.1
-Release:	3
+Version:	6.3
+Release:	0.%{_rc}.3
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
-# Source0-md5:	d62021893caf824dfd7e22853d174184
+Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}%{_rc}.tar.gz
+# Source0-md5:	2dcaa171791ca5b604be3a97832d0d60
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-python-lib.patch
 Patch2:		%{name}-desktop.patch
@@ -33,7 +34,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 GCompris / I Have Understood is an educational game for children
-starting at 3. Today several Boards are implemented:
+starting at 2. Today several Boards are implemented:
 - Click on the animals => learn the mouse/click usage
 - Type the falling letters => learn the keyboard usage
 - Falling Dices
@@ -51,7 +52,7 @@ You should install it only if you have children using this computer.
 
 %description -l fr
 GCompris / J'ai Compris est un logiciel éducatif pour les enfants à
-partir de 3 ans.
+partir de 2 ans.
 
 Aujourd'hui, plusieurs tableaux sont implémentés :
 - Cliquer sur les animaux => apprentissage du click et de la souris
@@ -69,7 +70,7 @@ Le jeu est inclus dans le bureau GNOME sous le menu Jeux.
 À installer si vous avez des enfants utilisant cet ordinateur.
 
 %description -l pl
-GCompris / Zrozumia³em to gra edukacyjna dla dzieci od 3 lat.
+GCompris / Zrozumia³em to gra edukacyjna dla dzieci od 2 lat.
 Aktualnie zaimplementowane jest kilka plansz:
 - klikanie na zwierzêtach - nauka u¿ywania myszy/klikania
 - wpisywanie spadaj±cych liter - nauka u¿ywania klawiatury
@@ -97,6 +98,51 @@ gcompris development package.
 
 %description devel -l pl
 Pliki dla programistów gcompris.
+
+
+%package -n assetml-voices-alphabet-da
+Summary:        Alphabet voices in Danish
+Summary(pl):    Wymowa alfabetu w jêzyku duñskim
+Group:          X11/Applications/Games
+
+%description -n assetml-voices-alphabet-da
+Alphabet voices in Danish.
+
+%description -n assetml-voices-alphabet-da -l pl
+Wymowa alfabetu w jêzyku duñskim.
+
+%package -n assetml-voices-colors-da
+Summary:        Colors voices in Danish
+Summary(pl):    Wymowa nazw kolorów w jêzyku duñskim
+Group:          X11/Applications/Games 
+
+%description -n assetml-voices-colors-da
+Colors voices in Danish.
+
+%description -n assetml-voices-colors-da -l pl
+Wymowa nazw kolorów w jêzyku duñskim.
+
+%package -n assetml-voices-geography-da
+Summary:        Country name voices in Danish
+Summary(pl):    Wymowa nazw pañstw w jêzyku duñskim
+Group:          X11/Applications/Games
+
+%description -n assetml-voices-geography-da
+Country name voices in Danish.
+
+%description -n assetml-voices-geography-da -l pl
+Wymowa nazw pañstw w jêzyku duñskim.
+
+%package -n assetml-voices-misc-da
+Summary:        Miscelaneous voices in Danish
+Summary(pl):    Wymowa ró¿nych s³ow w jêzyku duñskim
+Group:          X11/Applications/Games
+
+%description -n assetml-voices-misc-da
+Miscelaneous voices in Danish.
+
+%description -n assetml-voices-misc-da -l pl
+Wymowa ró¿nych s³ow w jêzyku duñskim.
 
 %package -n assetml-voices-alphabet-de
 Summary:	Alphabet voices in German
@@ -386,7 +432,7 @@ Pakiet zawiera flagi pañstw w formacie png 60x40 oraz plik opisu
 assetml.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{_rc}
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
@@ -459,6 +505,26 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.la
 %{_includedir}/libgcompris-1.0
 %{_pkgconfigdir}/*.pc
+
+%files -n assetml-voices-alphabet-da
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/da/alphabet
+%{_datadir}/assetml/gcompris_alphabet_da.assetml
+
+%files -n assetml-voices-colors-da
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/da/colors
+%{_datadir}/assetml/gcompris_colors_da.assetml
+
+%files -n assetml-voices-geography-da
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/da/geography
+%{_datadir}/assetml/gcompris_geography_da.assetml
+
+%files -n assetml-voices-misc-da
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/da/misc
+%{_datadir}/assetml/gcompris_misc_da.assetml
 
 %files -n assetml-voices-alphabet-de
 %defattr(644,root,root,755)
