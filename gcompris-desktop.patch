@@ -15,12 +15,29 @@ diff -urN gcompris-6.1.orig/configure.in gcompris-6.1.new/configure.in
 diff -urN gcompris-6.1.orig/gcompris-edit.desktop.in gcompris-6.1.new/gcompris-edit.desktop.in
 --- gcompris-6.1.orig/gcompris-edit.desktop.in	2003-10-07 13:14:36.000000000 +0200
 +++ gcompris-6.1.new/gcompris-edit.desktop.in	2004-06-24 11:20:54.149725800 +0200
-@@ -2,7 +2,7 @@
+@@ -2,11 +2,11 @@
  Encoding=UTF-8
  Name=GCompris Editor
  _Comment=Editor for gcompris
 -Exec=gcompris-edit
 +Exec=gcompris_edit
  Icon=gcompris-edit.png
- Terminal=0
+-Terminal=0
++Terminal=false
  Type=Application
+-Categories=GNOME;Application;Game;
++Categories=GTK;GNOME;Game;
+ StartupNotify=true
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=gcompris
+--- gcompris-6.1.orig/gcompris.desktop.in.in	Tue Jul 27 20:31:03 2004
++++ gcompris-6.1.new/gcompris.desktop.in.in	Tue Jul 27 20:31:03 2004
+@@ -6,7 +6,7 @@
+ Icon=gcompris.png
+ Terminal=false
+ Type=Application
+-Categories=GNOME;Application;Game;
++Categories=GTK;GNOME;Game;
+ StartupNotify=true
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=gcompris
