@@ -1,0 +1,39 @@
+diff -urN gcompris-6.1.orig/gcompris.desktop.in gcompris-6.1.new/gcompris.desktop.in
+--- gcompris-6.1.orig/gcompris.desktop.in	2003-10-06 23:30:30.000000000 +0200
++++ gcompris-6.1.new/gcompris.desktop.in	2004-06-22 20:03:16.649534560 +0200
+@@ -1,7 +1,8 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+-_Name=Educational suite gcompris
+-_Comment=Educational game starting at 3 years old
++Name=GCompris
++Comment=Educational game starting at 3 years old
++Comment[pl]=Zestaw edukacyjny dla dzieci w wieku 3-10 lat
+ Exec=gcompris
+ Icon=gcompris.png
+ Terminal=false
+@@ -11,3 +12,4 @@
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=gcompris
+ X-GNOME-Bugzilla-Component=
++# vi: encoding=utf-8
+diff -urN gcompris-6.1.orig/gcompris-edit.desktop.in gcompris-6.1.new/gcompris-edit.desktop.in
+--- gcompris-6.1.orig/gcompris-edit.desktop.in	2003-10-07 13:14:36.000000000 +0200
++++ gcompris-6.1.new/gcompris-edit.desktop.in	2004-06-22 20:25:14.806144296 +0200
+@@ -1,8 +1,9 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+ Name=GCompris Editor
+-_Comment=Editor for gcompris
+-Exec=gcompris-edit
++Comment=Editor for GCompris
++Comment[pl]=Edytor dla GCompris
++Exec=gcompris_edit
+ Icon=gcompris-edit.png
+ Terminal=0
+ Type=Application
+@@ -11,3 +12,4 @@
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=gcompris
+ X-GNOME-Bugzilla-Component=
++# vi: encoding=utf-8
