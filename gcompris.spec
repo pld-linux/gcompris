@@ -2,7 +2,7 @@ Summary:	Educational suite for kids 3-10 years old
 Summary(pl):	Zestaw edukacyjny dla dzieci w wieku 3-10 lat
 Name:		gcompris
 Version:	6.1
-Release:	1.2
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-python-lib.patch
 Patch2:		%{name}-desktop.patch
+Patch3:		%{name}-locale_names.patch
 URL:		http://www.ofset.org/gcompris/
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
@@ -389,7 +390,9 @@ assetml.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
+mv -f po/{no,nb}.po
 find . -name "*desktop.in" -exec mv -f {} {}.in \;
 
 %build
