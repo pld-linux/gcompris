@@ -7,18 +7,19 @@ License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
 # Source0-md5:	93145ecf6cc4629afa3c0ed959793ee1
-URL:		http://ofset.sf.net/gcompris
-BuildRequires:	gnuchess >= 5.00
-BuildRequires:	libassetml-devel
-BuildRequires:	libogg-devel
-BuildRequires:	libxml2-devel
-BuildRequires:	libgnomeui-devel >= 2.2.0
-BuildRequires:	libvorbis-devel
+Patch0:		%{name}-info.patch
+URL:		http://ofset.sf.net/gcompris/
 BuildRequires:	libao-devel
-BuildRequires:	texinfo
+BuildRequires:	libassetml-devel
+BuildRequires:	libgnomeui-devel >= 2.2.0
+BuildRequires:	libogg-devel
+BuildRequires:	libvorbis-devel
+BuildRequires:	libxml2-devel
+BuildRequires:	popt-devel >= 1.5
 BuildRequires:	python-gnome
 BuildRequires:	python-devel
 BuildRequires:	python-pygtk-devel
+BuildRequires:	texinfo
 Requires:	assetml-flags
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -331,9 +332,11 @@ Pakiet zawiera flagi pañstw w formacie png 60x40 oraz plik opisu assetml.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-%configure
+%configure \
+	GNUCHESS="/usr/bin/gnuchess"
 %{__make}
 
 %install
@@ -343,17 +346,29 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	Gamesdir=%{_desktopdir}
 
+# replace fr with en one
+cp -f docs/C/gcompris.info $RPM_BUILD_ROOT%{_infodir}/gcompris.info
+
+rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/*.la
+
 %find_lang %{name} --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
+
+%postun
+[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/%{name}
-%attr(755,root,root) %{_libdir}/%{name}/*
+%attr(755,root,root) %{_libdir}/%{name}/*.so
+%{_libdir}/%{name}/python
 %dir %{_datadir}/gcompris
 %dir %{_datadir}/gcompris/boards
 %dir %{_datadir}/gcompris/boards/skins
@@ -371,7 +386,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gcompris/boards/sounds/HOWTO_ENCODE
 %dir %{_datadir}/assetml
 %{_desktopdir}/*
-%{_infodir}/*
+%{_infodir}/*.info*
 %{_pixmapsdir}/*.png
 
 %files -n assetml-voices-alphabet-de
