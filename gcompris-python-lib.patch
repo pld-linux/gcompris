@@ -1,0 +1,26 @@
+diff -dur gcompris-5.2.orig/configure.in gcompris-5.2/configure.in
+--- gcompris-5.2.orig/configure.in	2004-02-16 22:41:29.000000000 +0100
++++ gcompris-5.2/configure.in	2004-04-08 09:01:26.155107083 +0200
+@@ -201,7 +201,7 @@
+   if test x$build_python_plugin = xyes; then
+     dnl Search for python's libs
+     dnl Take the needed libraries into the lib/python/config/Makefile... (see dia config)
+-    python_makefile="${python_exec_prefix}/lib/python${python_version}/config/Makefile"
++    python_makefile="${libdir}/python${python_version}/config/Makefile"
+     if test -f "${python_makefile}"; then
+     dnl extra required libs
+       python_localmodlibs=`sed -n -e 's/^LOCALMODLIBS=\(.*\)/\1/p' $python_makefile`
+@@ -211,10 +211,10 @@
+       python_libs="${python_localmodlibs} ${python_basemodlibs} ${python_other_libs}"
+ 
+       python_old_ldflags=${LDFLAGS}
+-      LDFLAGS="${LDFLAGS} ${python_libs_cflags} -L${python_exec_prefix}/lib/python${python_version}/config ${python_libs}"
++      LDFLAGS="${LDFLAGS} ${python_libs_cflags} -L${libdir}/python${python_version}/config ${python_libs}"
+       AC_CHECK_LIB(python${python_version}, 
+                    Py_Initialize, 
+-                   PYTHON_LIBS="${python_libs_cflags} -L${python_exec_prefix}/lib/python${python_version}/config -lpython${python_version} ${python_libs}",
++                   PYTHON_LIBS="${python_libs_cflags} -L${libdir}/python${python_version}/config -lpython${python_version} ${python_libs}",
+                    [ AC_MSG_WARN([Couldn't find python library, python plugin disabled.])
+                      build_python_plugin=no ])  
+       LDFLAGS=${python_old_ldflags}
+Only in gcompris-5.2: configure.in~
