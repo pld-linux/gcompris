@@ -1,14 +1,12 @@
 diff -urN gcompris-6.1.orig/configure.in gcompris-6.1.new/configure.in
 --- gcompris-6.1.orig/configure.in	2004-06-22 19:52:34.000000000 +0200
 +++ gcompris-6.1.new/configure.in	2004-06-24 00:02:45.000000000 +0200
-@@ -435,8 +435,8 @@
+@@ -435,8 +435,6 @@
  dnl Autoconf output
  AC_OUTPUT([ gcompris.spec
  Makefile
 -gcompris.desktop
 -gcompris-edit.desktop
-+gcompris.desktop.in
-+gcompris-edit.desktop.in
  src/Makefile
  src/gcompris/Makefile
  src/gcompris/libgcompris-1.0.pc
