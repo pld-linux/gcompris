@@ -1,15 +1,16 @@
 Summary:	Educational suite for kids 3-10 years old
 Summary(pl):	Zestaw edukacyjny dla dzieci w wieku 3-10 lat
 Name:		gcompris
-Version:	5.2
+Version:	6.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
-# Source0-md5:	93145ecf6cc4629afa3c0ed959793ee1
+# Source0-md5:	d62021893caf824dfd7e22853d174184
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-python-lib.patch
-URL:		http://ofset.sf.net/gcompris/
+URL:		http://www.ofset.org/gcompris/
+BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -22,7 +23,6 @@ BuildRequires:	libtool
 BuildRequires:	libvorbis-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	popt-devel >= 1.5
-BuildRequires:	python-gnome
 BuildRequires:	python-devel
 BuildRequires:	python-gnome-devel
 BuildRequires:	texinfo
@@ -84,10 +84,21 @@ Gra jest w³±czana do menu Gry na pulpicie GNOME.
 
 Warto j± instalowaæ tylko je¶li mamy dzieci u¿ywaj±ce komputera.
 
+%package devel
+Summary:        gcompris development package
+Summary(pl):    Pliki dla programistów gcompris
+Group:          Development/Libraries
+Requires:       %{name} = %{version}-%{release}
+
+%description devel
+gcompris development package.
+
+%description devel -l pl
+Pliki dla programistów gcompris.
+
 %package -n assetml-voices-alphabet-de
 Summary:	Alphabet voices in German
 Summary(pl):	Wymowa alfabetu w jêzyku niemieckim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-de
@@ -99,7 +110,6 @@ Wymowa alfabetu w jêzyku niemieckim.
 %package -n assetml-voices-colors-de
 Summary:	Colors voices in German
 Summary(pl):	Wymowa nazw kolorów w jêzyku niemieckim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-colors-de
@@ -111,7 +121,6 @@ Wymowa nazw kolorów w jêzyku niemieckim.
 %package -n assetml-voices-geography-de
 Summary:	Country name voices in German
 Summary(pl):	Wymowa nazw pañstw w jêzyku niemieckim
-Version:	0.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-de
@@ -123,7 +132,6 @@ Wymowa nazw pañstw w jêzyku niemieckim.
 %package -n assetml-voices-misc-de
 Summary:	Miscelaneous voices in German
 Summary(pl):	Wymowa ró¿nych s³ow w jêzyku niemieckim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-de
@@ -135,7 +143,6 @@ Wymowa ró¿nych s³ow w jêzyku niemieckim.
 %package -n assetml-voices-alphabet-en
 Summary:	Alphabet voices in English
 Summary(pl):	Wymowa alfabetu w jêzyku angielskim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-en
@@ -147,7 +154,6 @@ Wymowa alfabetu w jêzyku angielskim.
 %package -n assetml-voices-colors-en
 Summary:	Colors voices in English
 Summary(pl):	Wymowa nazw kolorów w jêzyku angielskim
-Version:	1.1
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-colors-en
@@ -159,7 +165,6 @@ Wymowa nazw kolorów w jêzyku angielskim.
 %package -n assetml-voices-geography-en
 Summary:	Country name voices in English
 Summary(pl):	Wymowa nazw pañstw w jêzyku angielskim
-Version:	1.1
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-en
@@ -171,7 +176,6 @@ Wymowa nazw pañstw w jêzyku angielskim.
 %package -n assetml-voices-misc-en
 Summary:	Miscelaneous voices in English
 Summary(pl):	Wymowa ró¿nych s³ów w jêzyku angielskim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-en
@@ -183,7 +187,6 @@ Wymowa ró¿nych s³ów w jêzyku angielskim.
 %package -n assetml-voices-alphabet-es
 Summary:	Alphabet voices in Spanish
 Summary(pl):	Wymowa alfabetu w jêzyku hiszpañskim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-es
@@ -195,7 +198,6 @@ Wymowa alfabetu w jêzyku hiszpañskim.
 %package -n assetml-voices-colors-es
 Summary:	Colors voices in Spanish
 Summary(pl):	Wymowa nazw kolorów w jêzyku hiszpañskim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-colors-es
@@ -207,7 +209,6 @@ Wymowa nazw kolorów w jêzyku hiszpañskim.
 %package -n assetml-voices-geography-es
 Summary:	Country name voices in Spanish
 Summary(pl):	Wymowa nazw pañstw w jêzyku hiszpañskim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-es
@@ -219,7 +220,6 @@ Wymowa nazw pañstw w jêzyku hiszpañskim.
 %package -n assetml-voices-misc-es
 Summary:	Miscelaneous voices in Spanish
 Summary(pl):	Wymowa ró¿nych s³ów w jêzyku hiszpañskim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-es
@@ -231,7 +231,6 @@ Wymowa ró¿nych s³ów w jêzyku hiszpañskim.
 %package -n assetml-voices-alphabet-fr
 Summary:	Alphabet voices in French
 Summary(pl):	Wymowa alfabetu w jêzyku francuskim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-fr
@@ -243,7 +242,6 @@ Wymowa alfabetu w jêzyku francuskim.
 %package -n assetml-voices-colors-fr
 Summary:	Colors voices in French
 Summary(pl):	Wymowa nazw kolorów w jêzyku francuskim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-colors-fr
@@ -255,7 +253,6 @@ Wymowa nazw kolorów w jêzyku francuskim.
 %package -n assetml-voices-geography-fr
 Summary:	Country name voices in French
 Summary(pl):	Wymowa nazw pañstw w jêzyku francuskim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-fr
@@ -267,7 +264,6 @@ Wymowa nazw pañstw w jêzyku francuskim.
 %package -n assetml-voices-misc-fr
 Summary:	Miscelaneous voices in French
 Summary(pl):	Wymowa ró¿nych s³ów w jêzyku francuskim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-fr
@@ -276,10 +272,64 @@ Miscelaneous voices in French.
 %description -n assetml-voices-misc-fr -l pl
 Wymowa ró¿nych s³ów w jêzyku francuskim.
 
+%package -n assetml-voices-france_region-fr
+Summary:	Region name voices in French
+Summary(pl):	Wymowa nazw regionów w jêzyku francuskim
+Group:		X11/Applications/Games
+
+%description -n assetml-voices-france_region-fr
+Region name voices in French.
+
+%description -n assetml-voices-france_region-fr -l pl
+Wymowa nazw regionów w jêzyku francuskim.
+
+%package -n assetml-voices-alphabet-it
+Summary:	Alphabet voices in Italian
+Summary(pl):	Wymowa alfabetu w jêzyku w³oskim
+Group:		X11/Applications/Games
+
+%description -n assetml-voices-alphabet-it
+Alphabet voices in Itaian.
+
+%description -n assetml-voices-alphabet-it -l pl
+Wymowa alfabetu w jêzyku w³oskim.
+
+%package -n assetml-voices-colors-it
+Summary:	Colors voices in Italian
+Summary(pl):	Wymowa nazw kolorów w jêzyku w³oskim
+Group:		X11/Applications/Games
+
+%description -n assetml-voices-colors-it
+Colors voices in Italian.
+
+%description -n assetml-voices-colors-it -l pl
+Wymowa nazw kolorów w jêzyku w³oskim.
+
+%package -n assetml-voices-geography-it
+Summary:	Country name voices in Italian
+Summary(pl):	Wymowa nazw pañstw w jêzyku w³oskim
+Group:		X11/Applications/Games
+
+%description -n assetml-voices-geography-it
+Country name voices in Italian.
+
+%description -n assetml-voices-geography-it -l pl
+Wymowa nazw pañstw w jêzyku w³oskim.
+
+%package -n assetml-voices-misc-it
+Summary:	Miscelaneous voices in Italian
+Summary(pl):	Wymowa ró¿nych s³ów w jêzyku w³oskim
+Group:		X11/Applications/Games
+
+%description -n assetml-voices-misc-it
+Miscelaneous voices in Italian.
+
+%description -n assetml-voices-misc-it -l pl
+Wymowa ró¿nych s³ów w jêzyku w³oskim.
+
 %package -n assetml-voices-alphabet-pt
 Summary:	Alphabet voices in Portuguese
 Summary(pl):	Wymowa alfabetu w jêzyku portugalskim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-pt
@@ -291,7 +341,6 @@ Wymowa alfabetu w jêzyku portugalskim.
 %package -n assetml-voices-colors-pt
 Summary:	Colors voices in Portuguese
 Summary(pl):	Wymowa nazw kolorów w jêzyku portugalskim
-Version:	1.0
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-colors-pt
@@ -303,7 +352,6 @@ Wymowa nazw kolorów w jêzyku portugalskim.
 %package -n assetml-voices-geography-pt
 Summary:	Country name voices in Portuguese
 Summary(pl):	Wymowa nazw pañstw w jêzyku portugalskim
-Version:	1.1
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-pt
@@ -315,7 +363,6 @@ Wymowa nazw pañstw w jêzyku portugalskim.
 %package -n assetml-voices-misc-pt
 Summary:	Miscelaneous voices in Portuguese
 Summary(pl):	Wymowa ró¿nych s³ów w jêzyku portugalskim
-Version:	1.1
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-pt
@@ -327,14 +374,14 @@ Wymowa ró¿nych s³ów w jêzyku portugalskim.
 %package -n assetml-flags
 Summary:	Country flags as 60x40 png files and an assetml description file
 Summary(pl):	Flagi pañstw jako pliki png 60x40 oraz plik opisu assetml
-Version:	1.1
 Group:		X11/Applications/Games
 
 %description -n assetml-flags
 Contains png 60x40 country flags and an assetml description file.
 
 %description -n assetml-flags -l pl
-Pakiet zawiera flagi pañstw w formacie png 60x40 oraz plik opisu assetml.
+Pakiet zawiera flagi pañstw w formacie png 60x40 oraz plik opisu
+assetml.
 
 %prep
 %setup -q
@@ -342,15 +389,15 @@ Pakiet zawiera flagi pañstw w formacie png 60x40 oraz plik opisu assetml.
 %patch1 -p1
 
 %build
-%{__gettextize}
-%{__libtoolize}
+glib-gettextize --copy --force
 intltoolize --copy --force
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
 %{__automake}
 %configure \
-	GNUCHESS="/usr/bin/gnuchess"
+	GNUCHESS="%{_bindir}/gnuchess"
 %{__make}
 
 %install
@@ -372,36 +419,40 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
+/sbin/ldconfig
 
 %postun
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
+/sbin/ldconfig
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %dir %{_libdir}/%{name}
-%attr(755,root,root) %{_libdir}/%{name}/*.so
-%{_libdir}/%{name}/python
+%attr(755,root,root) %{_libdir}/%{name}/lib*.so
 %dir %{_datadir}/gcompris
 %dir %{_datadir}/gcompris/boards
-%dir %{_datadir}/gcompris/boards/skins
-%{_datadir}/gcompris/boards/skins/*
 %{_datadir}/gcompris/boards/[!fs]*
 %{_datadir}/gcompris/boards/f[iu]*
-%{_datadir}/gcompris/boards/s[cmu]*
+%{_datadir}/gcompris/boards/s[ckmu]*
 %dir %{_datadir}/gcompris/boards/sounds
 %{_datadir}/gcompris/boards/sounds/*.ogg
-%dir %{_datadir}/gcompris/boards/sounds/chronos
-%dir %{_datadir}/gcompris/boards/sounds/chronos/space
-%{_datadir}/gcompris/boards/sounds/chronos/space/*.ogg
-%dir %{_datadir}/gcompris/boards/sounds/melody
-%{_datadir}/gcompris/boards/sounds/melody/*.ogg
-%{_datadir}/gcompris/boards/sounds/HOWTO_ENCODE
+%{_datadir}/gcompris/boards/sounds/chronos
+%{_datadir}/gcompris/boards/sounds/melody
+%{_datadir}/gcompris/python
 %dir %{_datadir}/assetml
 %{_desktopdir}/*
 %{_infodir}/*.info*
 %{_pixmapsdir}/*.png
+
+%files devel
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
+%{_includedir}/libgcompris-1.0
+%{_pkgconfigdir}/*.pc
 
 %files -n assetml-voices-alphabet-de
 %defattr(644,root,root,755)
@@ -482,6 +533,31 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/gcompris/boards/sounds/fr/misc
 %{_datadir}/assetml/gcompris_misc_fr.assetml
+
+%files -n assetml-voices-france_region-fr
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/fr/france_region
+%{_datadir}/assetml/gcompris_franceregion_fr.assetml
+
+%files -n assetml-voices-alphabet-it
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/it/alphabet
+%{_datadir}/assetml/gcompris_alphabet_it.assetml
+
+%files -n assetml-voices-colors-it
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/it/colors
+%{_datadir}/assetml/gcompris_colors_it.assetml
+
+%files -n assetml-voices-geography-it
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/it/geography
+%{_datadir}/assetml/gcompris_geography_it.assetml
+
+%files -n assetml-voices-misc-it
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/it/misc
+%{_datadir}/assetml/gcompris_misc_it.assetml
 
 %files -n assetml-voices-alphabet-pt
 %defattr(644,root,root,755)
