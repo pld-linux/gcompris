@@ -1,4 +1,4 @@
-%define		_rc	RC2
+%define		_rc	RC3
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
@@ -7,12 +7,11 @@ Release:	0.%{_rc}.1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}%{_rc}.tar.gz
-# Source0-md5:	5ace53f93211842d0dfc272e39d3a014
+# Source0-md5:	0be1f9d685a81bbfb081e5739925086a
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-python-lib.patch
 Patch2:		%{name}-desktop.patch
-Patch3:		%{name}-locale_names.patch
-URL:		http://www.ofset.org/gcompris/
+URL:		http://gcompris.net/
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -418,6 +417,50 @@ Miscelaneous voices in Portuguese.
 %description -n assetml-voices-misc-pt -l pl
 Wymowa ró¿nych s³ów w jêzyku portugalskim.
 
+%package -n assetml-voices-alphabet-ru
+Summary:        Alphabet voices in Russian
+Summary(pl):    Wymowa alfabetu w jêzyku rosyjskim
+Group:          X11/Applications/Games
+
+%description -n assetml-voices-alphabet-ru
+Alphabet voices in Russian.
+
+%description -n assetml-voices-alphabet-ru -l pl
+Wymowa alfabetu w jêzyku rosyjskim.
+
+%package -n assetml-voices-colors-ru
+Summary:        Colors voices in Russian
+Summary(pl):    Wymowa nazw kolorów w jêzyku rosyjskim
+Group:          X11/Applications/Games
+
+%description -n assetml-voices-colors-ru
+Colors voices in Russian.
+
+%description -n assetml-voices-colors-ru -l pl
+Wymowa nazw kolorów w jêzyku rosyjskim.
+
+%package -n assetml-voices-geography-ru
+Summary:        Country name voices in Russian
+Summary(pl):    Wymowa nazw pañstw w jêzyku rosyjskim
+Group:          X11/Applications/Games
+
+%description -n assetml-voices-geography-ru
+Country name voices in Russian.
+
+%description -n assetml-voices-geography-pt -l ru
+Wymowa nazw pañstw w jêzyku rosyjskim.
+
+%package -n assetml-voices-misc-ru
+Summary:        Miscelaneous voices in Russian
+Summary(pl):    Wymowa ró¿nych s³ów w jêzyku rosyjskim
+Group:          X11/Applications/Games
+
+%description -n assetml-voices-misc-ru
+Miscelaneous voices in Russian.
+
+%description -n assetml-voices-misc-ru -l pl
+Wymowa ró¿nych s³ów w jêzyku rosyjskim.
+
 %package -n assetml-flags
 Summary:	Country flags as 60x40 png files and an assetml description file
 Summary(pl):	Flagi pañstw jako pliki png 60x40 oraz plik opisu assetml
@@ -435,9 +478,6 @@ assetml.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
-
-mv -f po/{no,nb}.po
 
 %build
 glib-gettextize --copy --force
@@ -455,8 +495,7 @@ intltoolize --copy --force
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	Gamesdir=%{_desktopdir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 # replace fr with en one
 cp -f docs/C/gcompris.info $RPM_BUILD_ROOT%{_infodir}/gcompris.info
@@ -649,6 +688,26 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/gcompris/boards/sounds/pt/misc
 %{_datadir}/assetml/gcompris_misc_pt.assetml
+
+%files -n assetml-voices-alphabet-ru
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/ru/alphabet
+%{_datadir}/assetml/gcompris_alphabet_ru.assetml
+
+%files -n assetml-voices-colors-ru
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/ru/colors
+%{_datadir}/assetml/gcompris_colors_ru.assetml
+
+%files -n assetml-voices-geography-ru
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/ru/geography
+%{_datadir}/assetml/gcompris_geography_ru.assetml
+
+%files -n assetml-voices-misc-ru
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/ru/misc
+%{_datadir}/assetml/gcompris_misc_ru.assetml
 
 %files -n assetml-flags
 %defattr(644,root,root,755)
