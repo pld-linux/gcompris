@@ -8,11 +8,17 @@ Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
 # Source0-md5:	93145ecf6cc4629afa3c0ed959793ee1
 Patch0:		%{name}-info.patch
+Patch1:		%{name}-python-lib.patch
 URL:		http://ofset.sf.net/gcompris/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gettext-devel
+BuildRequires:	intltool
 BuildRequires:	libao-devel
 BuildRequires:	libassetml-devel
 BuildRequires:	libgnomeui-devel >= 2.2.0
 BuildRequires:	libogg-devel
+BuildRequires:	libtool
 BuildRequires:	libvorbis-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	popt-devel >= 1.5
@@ -333,8 +339,16 @@ Pakiet zawiera flagi pañstw w formacie png 60x40 oraz plik opisu assetml.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
+%{__gettextize}
+%{__libtoolize}
+intltoolize --copy --force
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
 	GNUCHESS="/usr/bin/gnuchess"
 %{__make}
