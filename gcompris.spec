@@ -393,7 +393,6 @@ assetml.
 %patch3 -p1
 
 mv -f po/{no,nb}.po
-find . -name "*desktop.in" -exec mv -f {} {}.in \;
 
 %build
 glib-gettextize --copy --force
