@@ -18,7 +18,7 @@ BuildRequires:	libxml2-devel
 BuildRequires:	popt-devel >= 1.5
 BuildRequires:	python-gnome
 BuildRequires:	python-devel
-BuildRequires:	python-pygtk-devel
+BuildRequires:	python-gnome-devel
 BuildRequires:	texinfo
 Requires:	assetml-flags
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
