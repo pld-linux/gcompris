@@ -45,7 +45,7 @@ starting at 3. Today several Boards are implemented:
 - Balance the scales
 - And much more ...
 
-The Game is included in the Gnome Desktop under the Game menu.
+The game is included in the GNOME desktop under the Game menu.
 
 You should install it only if you have children using this computer.
 
@@ -64,7 +64,7 @@ Aujourd'hui, plusieurs tableaux sont implémentés :
 - Pilote un avion pour attraper les nuages dans l'ordre
 - Equilibre la balance
 
-Le jeu est inclus dans le bureau Gnome sous le menu Jeux.
+Le jeu est inclus dans le bureau GNOME sous le menu Jeux.
 
 À installer si vous avez des enfants utilisant cet ordinateur.
 
