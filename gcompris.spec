@@ -1,4 +1,5 @@
 Summary:	Educational suite for kids 3-10 years old
+Summary(pl):	Zestaw edukacyjny dla dzieci w wieku 3-10 lat
 Name:		gcompris
 Version:	5.2
 Release:	1
@@ -6,7 +7,6 @@ License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
 # Source0-md5:	93145ecf6cc4629afa3c0ed959793ee1
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 URL:		http://ofset.sf.net/gcompris
 BuildRequires:	gnuchess >= 5.00
 BuildRequires:	libassetml-devel
@@ -20,9 +20,10 @@ BuildRequires:	python-gnome
 BuildRequires:	python-devel
 BuildRequires:	python-pygtk-devel
 Requires:	assetml-flags
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-GCompris / I Have Understood is an educationnal game for children
+GCompris / I Have Understood is an educational game for children
 starting at 3. Today several Boards are implemented:
 - Click on the animals => learn the mouse/click usage
 - Type the falling letters => learn the keyboard usage
@@ -58,184 +59,280 @@ Le jeu est inclus dans le bureau Gnome sous le menu Jeux.
 
 À installer si vous avez des enfants utilisant cet ordinateur.
 
+%description -l pl
+GCompris / Zrozumia³em to gra edukacyjna dla dzieci od 3 lat.
+Aktualnie zaimplementowane jest kilka plansz:
+- klikanie na zwierzêtach - nauka u¿ywania myszy/klikania
+- wpisywanie spadaj±cych liter - nauka u¿ywania klawiatury
+- spadaj±ce kostki
+- spadaj±ce s³owa
+- podstawowa algebra
+- nauka czasu z zegarkiem analogowym
+- uk³adanka ze s³ynnymi obrazami
+- prowadzenie samolotu z ³apaniem coraz wiêkszej liczby chmur
+- równowa¿enie wagi
+- i wiele wiêcej...
+
+Gra jest w³±czana do menu Gry na pulpicie GNOME.
+
+Warto j± instalowaæ tylko je¶li mamy dzieci u¿ywaj±ce komputera.
+
 %package -n assetml-voices-alphabet-de
 Summary:	Alphabet voices in German
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa alfabetu w jêzyku niemieckim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-de
-Alphabet voices in German
+Alphabet voices in German.
+
+%description -n assetml-voices-alphabet-de -l pl
+Wymowa alfabetu w jêzyku niemieckim.
 
 %package -n assetml-voices-colors-de
 Summary:	Colors voices in German
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa nazw kolorów w jêzyku niemieckim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-colors-de
-Colors voices in German
+Colors voices in German.
+
+%description -n assetml-voices-colors-de -l pl
+Wymowa nazw kolorów w jêzyku niemieckim.
 
 %package -n assetml-voices-geography-de
 Summary:	Country name voices in German
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa nazw pañstw w jêzyku niemieckim
 Version:	0.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-de
-Country name voices in German
+Country name voices in German.
+
+%description -n assetml-voices-geography-de -l pl
+Wymowa nazw pañstw w jêzyku niemieckim.
 
 %package -n assetml-voices-misc-de
 Summary:	Miscelaneous voices in German
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa ró¿nych s³ow w jêzyku niemieckim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-de
-Miscelaneous voices in German
+Miscelaneous voices in German.
 
+%description -n assetml-voices-misc-de -l pl
+Wymowa ró¿nych s³ow w jêzyku niemieckim.
 
 %package -n assetml-voices-alphabet-en
 Summary:	Alphabet voices in English
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa alfabetu w jêzyku angielskim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-en
-Alphabet voices in English
+Alphabet voices in English.
+
+%description -n assetml-voices-alphabet-en -l pl
+Wymowa alfabetu w jêzyku angielskim.
 
 %package -n assetml-voices-colors-en
 Summary:	Colors voices in English
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa nazw kolorów w jêzyku angielskim
 Version:	1.1
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-colors-en
-Colors voices in English
+Colors voices in English.
+
+%description -n assetml-voices-colors-en -l pl
+Wymowa nazw kolorów w jêzyku angielskim.
 
 %package -n assetml-voices-geography-en
 Summary:	Country name voices in English
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa nazw pañstw w jêzyku angielskim
 Version:	1.1
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-en
-Country name voices in English
+Country name voices in English.
+
+%description -n assetml-voices-geography-en -l pl
+Wymowa nazw pañstw w jêzyku angielskim.
 
 %package -n assetml-voices-misc-en
 Summary:	Miscelaneous voices in English
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa ró¿nych s³ów w jêzyku angielskim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-en
-Miscelaneous voices in English
+Miscelaneous voices in English.
 
+%description -n assetml-voices-misc-en -l pl
+Wymowa ró¿nych s³ów w jêzyku angielskim.
 
 %package -n assetml-voices-alphabet-es
 Summary:	Alphabet voices in Spanish
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa alfabetu w jêzyku hiszpañskim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-es
-Alphabet voices in Spanish
+Alphabet voices in Spanish.
+
+%description -n assetml-voices-alphabet-es -l pl
+Wymowa alfabetu w jêzyku hiszpañskim.
 
 %package -n assetml-voices-colors-es
 Summary:	Colors voices in Spanish
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa nazw kolorów w jêzyku hiszpañskim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-colors-es
-Colors voices in Spanish
+Colors voices in Spanish.
+
+%description -n assetml-voices-colors-es -l pl
+Wymowa nazw kolorów w jêzyku hiszpañskim.
 
 %package -n assetml-voices-geography-es
 Summary:	Country name voices in Spanish
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa nazw pañstw w jêzyku hiszpañskim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-es
-Country name voices in Spanish
+Country name voices in Spanish.
+
+%description -n assetml-voices-geography-es -l pl
+Wymowa nazw pañstw w jêzyku hiszpañskim.
 
 %package -n assetml-voices-misc-es
 Summary:	Miscelaneous voices in Spanish
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa ró¿nych s³ów w jêzyku hiszpañskim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-es
 Miscelaneous voices in Spanish
 
+%description -n assetml-voices-misc-es -l pl
+Wymowa ró¿nych s³ów w jêzyku hiszpañskim.
 
 %package -n assetml-voices-alphabet-fr
 Summary:	Alphabet voices in French
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa alfabetu w jêzyku francuskim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-fr
-Alphabet voices in French
+Alphabet voices in French.
+
+%description -n assetml-voices-alphabet-fr -l pl
+Wymowa alfabetu w jêzyku francuskim.
 
 %package -n assetml-voices-colors-fr
 Summary:	Colors voices in French
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa nazw kolorów w jêzyku francuskim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-colors-fr
-Colors voices in French
+Colors voices in French.
+
+%description -n assetml-voices-colors-fr -l pl
+Wymowa nazw kolorów w jêzyku francuskim.
 
 %package -n assetml-voices-geography-fr
 Summary:	Country name voices in French
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa nazw pañstw w jêzyku francuskim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-fr
-Country name voices in French
+Country name voices in French.
+
+%description -n assetml-voices-geography-fr -l pl
+Wymowa nazw pañstw w jêzyku francuskim.
 
 %package -n assetml-voices-misc-fr
 Summary:	Miscelaneous voices in French
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa ró¿nych s³ów w jêzyku francuskim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-fr
-Miscelaneous voices in French
+Miscelaneous voices in French.
 
+%description -n assetml-voices-misc-fr -l pl
+Wymowa ró¿nych s³ów w jêzyku francuskim.
 
 %package -n assetml-voices-alphabet-pt
 Summary:	Alphabet voices in Portuguese
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa alfabetu w jêzyku portugalskim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-pt
-Alphabet voices in Portuguese
+Alphabet voices in Portuguese.
+
+%description -n assetml-voices-alphabet-pt -l pl
+Wymowa alfabetu w jêzyku portugalskim.
 
 %package -n assetml-voices-colors-pt
 Summary:	Colors voices in Portuguese
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa nazw kolorów w jêzyku portugalskim
 Version:	1.0
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-colors-pt
-Colors voices in Portuguese
+Colors voices in Portuguese.
+
+%description -n assetml-voices-colors-pt -l pl
+Wymowa nazw kolorów w jêzyku portugalskim.
 
 %package -n assetml-voices-geography-pt
 Summary:	Country name voices in Portuguese
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa nazw pañstw w jêzyku portugalskim
 Version:	1.1
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-pt
-Country name voices in Portuguese
+Country name voices in Portuguese.
+
+%description -n assetml-voices-geography-pt -l pl
+Wymowa nazw pañstw w jêzyku portugalskim.
 
 %package -n assetml-voices-misc-pt
 Summary:	Miscelaneous voices in Portuguese
-Group:		X11/Applications/Games
+Summary(pl):	Wymowa ró¿nych s³ów w jêzyku portugalskim
 Version:	1.1
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-pt
-Miscelaneous voices in Portuguese
+Miscelaneous voices in Portuguese.
 
+%description -n assetml-voices-misc-pt -l pl
+Wymowa ró¿nych s³ów w jêzyku portugalskim.
 
 %package -n assetml-flags
-Summary:	Contains png 60x40 country flags and an assetml description file
-Group:		X11/Applications/Games
+Summary:	Country flags as 60x40 png files and an assetml description file
+Summary(pl):	Flagi pañstw jako pliki png 60x40 oraz plik opisu assetml
 Version:	1.1
+Group:		X11/Applications/Games
 
 %description -n assetml-flags
-Contains png 60x40 country flags and an assetml description file
+Contains png 60x40 country flags and an assetml description file.
+
+%description -n assetml-flags -l pl
+Pakiet zawiera flagi pañstw w formacie png 60x40 oraz plik opisu assetml.
 
 %prep
 %setup -q
 
 %build
-
 %configure
 %{__make}
 
@@ -255,20 +352,24 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/%{name}/*
 %dir %{_libdir}/%{name}
+%attr(755,root,root) %{_libdir}/%{name}/*
 %dir %{_datadir}/gcompris
 %dir %{_datadir}/gcompris/boards
 %dir %{_datadir}/gcompris/boards/skins
-%dir %{_datadir}/gcompris/boards/sounds
 %{_datadir}/gcompris/boards/skins/*
-%{_datadir}/gcompris/boards/[^fs]*
+%{_datadir}/gcompris/boards/[!fs]*
 %{_datadir}/gcompris/boards/f[iu]*
 %{_datadir}/gcompris/boards/s[cmu]*
+%dir %{_datadir}/gcompris/boards/sounds
 %{_datadir}/gcompris/boards/sounds/*.ogg
-%{_datadir}/gcompris/boards/sounds/melody/*.ogg
+%dir %{_datadir}/gcompris/boards/sounds/chronos
+%dir %{_datadir}/gcompris/boards/sounds/chronos/space
 %{_datadir}/gcompris/boards/sounds/chronos/space/*.ogg
+%dir %{_datadir}/gcompris/boards/sounds/melody
+%{_datadir}/gcompris/boards/sounds/melody/*.ogg
 %{_datadir}/gcompris/boards/sounds/HOWTO_ENCODE
+%dir %{_datadir}/assetml
 %{_desktopdir}/*
 %{_infodir}/*
 %{_pixmapsdir}/*.png
@@ -292,7 +393,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/gcompris/boards/sounds/de/misc
 %{_datadir}/assetml/gcompris_misc_de.assetml
-
 
 %files -n assetml-voices-alphabet-en
 %defattr(644,root,root,755)
@@ -334,7 +434,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gcompris/boards/sounds/es/misc
 %{_datadir}/assetml/gcompris_misc_es.assetml
 
-
 %files -n assetml-voices-alphabet-fr
 %defattr(644,root,root,755)
 %{_datadir}/gcompris/boards/sounds/fr/alphabet
@@ -354,7 +453,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/gcompris/boards/sounds/fr/misc
 %{_datadir}/assetml/gcompris_misc_fr.assetml
-
 
 %files -n assetml-voices-alphabet-pt
 %defattr(644,root,root,755)
@@ -378,5 +476,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n assetml-flags
 %defattr(644,root,root,755)
-%{_datadir}/gcompris/boards/flags/*
+%{_datadir}/gcompris/boards/flags
 %{_datadir}/assetml/gcompris_flags.assetml
