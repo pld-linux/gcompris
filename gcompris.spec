@@ -99,7 +99,6 @@ gcompris development package.
 %description devel -l pl
 Pliki dla programistów gcompris.
 
-
 %package -n assetml-voices-alphabet-da
 Summary:        Alphabet voices in Danish
 Summary(pl):    Wymowa alfabetu w jêzyku duñskim
@@ -135,14 +134,14 @@ Wymowa nazw pañstw w jêzyku duñskim.
 
 %package -n assetml-voices-misc-da
 Summary:        Miscelaneous voices in Danish
-Summary(pl):    Wymowa ró¿nych s³ow w jêzyku duñskim
+Summary(pl):    Wymowa ró¿nych s³ów w jêzyku duñskim
 Group:          X11/Applications/Games
 
 %description -n assetml-voices-misc-da
 Miscelaneous voices in Danish.
 
 %description -n assetml-voices-misc-da -l pl
-Wymowa ró¿nych s³ow w jêzyku duñskim.
+Wymowa ró¿nych s³ów w jêzyku duñskim.
 
 %package -n assetml-voices-alphabet-de
 Summary:	Alphabet voices in German
@@ -179,14 +178,14 @@ Wymowa nazw pañstw w jêzyku niemieckim.
 
 %package -n assetml-voices-misc-de
 Summary:	Miscelaneous voices in German
-Summary(pl):	Wymowa ró¿nych s³ow w jêzyku niemieckim
+Summary(pl):	Wymowa ró¿nych s³ów w jêzyku niemieckim
 Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-de
 Miscelaneous voices in German.
 
 %description -n assetml-voices-misc-de -l pl
-Wymowa ró¿nych s³ow w jêzyku niemieckim.
+Wymowa ró¿nych s³ów w jêzyku niemieckim.
 
 %package -n assetml-voices-alphabet-en
 Summary:	Alphabet voices in English
