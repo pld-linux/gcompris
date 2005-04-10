@@ -1,12 +1,9 @@
 diff -urN gcompris-6.1.orig/gcompris-edit.desktop.in gcompris-6.1.new/gcompris-edit.desktop.in
 --- gcompris-6.1.orig/gcompris-edit.desktop.in	2003-10-07 13:14:36.000000000 +0200
 +++ gcompris-6.1.new/gcompris-edit.desktop.in	2004-06-24 11:20:54.149725800 +0200
-@@ -2,11 +2,11 @@
- Encoding=UTF-8
- Name=GCompris Editor
+@@ -4,7 +4,7 @@
  _Comment=Editor for gcompris
--Exec=gcompris-edit
-+Exec=gcompris_edit
+ Exec=gcompris_edit
  Icon=gcompris-edit.png
 -Terminal=0
 +Terminal=false
