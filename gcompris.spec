@@ -20,12 +20,15 @@ BuildRequires:	libao-devel
 BuildRequires:	libassetml-devel
 BuildRequires:	libgnomeui-devel >= 2.2.0
 BuildRequires:	libogg-devel
+BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	libvorbis-devel
 BuildRequires:	libxml2-devel
+BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
 BuildRequires:	python-devel
 BuildRequires:	python-gnome-devel
+BuildRequires:	tetex
 BuildRequires:	texinfo
 Requires:	assetml-flags
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
