@@ -1,12 +1,12 @@
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
-Version:	6.5.2
+Version:	6.5.3
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
-# Source0-md5:	14a7247ed452b4e91ba422a7c4f285cd
+# Source0-md5:	11cc5c1fe2ebb583767884e18307534e
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-python-lib.patch
 Patch2:		%{name}-desktop.patch
