@@ -2,7 +2,7 @@ Summary:	Educational suite for kids 2-10 years old
 Summary(pl):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
 Version:	6.5.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
@@ -10,6 +10,8 @@ Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-python-lib.patch
 Patch2:		%{name}-desktop.patch
+Patch3:		%{name}-cleanup.patch
+Patch4:		%{name}-include.patch
 URL:		http://gcompris.net/
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
@@ -449,7 +451,7 @@ Group:          X11/Applications/Games
 %description -n assetml-voices-geography-ru
 Country name voices in Russian.
 
-%description -n assetml-voices-geography-pt -l ru
+%description -n assetml-voices-geography-ru -l pl
 Wymowa nazw pañstw w jêzyku rosyjskim.
 
 %package -n assetml-voices-misc-ru
@@ -462,6 +464,50 @@ Miscelaneous voices in Russian.
 
 %description -n assetml-voices-misc-ru -l pl
 Wymowa ró¿nych s³ów w jêzyku rosyjskim.
+
+%package -n assetml-voices-alphabet-sv
+Summary:        Alphabet voices in Swedish
+Summary(pl):    Wymowa alfabetu w jêzyku szwedzkim
+Group:          X11/Applications/Games
+
+%description -n assetml-voices-alphabet-sv
+Alphabet voices in Swedish.
+
+%description -n assetml-voices-alphabet-sv -l pl
+Wymowa alfabetu w jêzyku szwedzkim.
+
+%package -n assetml-voices-colors-sv
+Summary:	Colors voices in Swedish
+Summary(pl):	Wymowa nazw kolorów w jêzyku szwedzkim
+Group:		X11/Applications/Games
+
+%description -n assetml-voices-colors-sv
+Colors voices in Swedish.
+
+%description -n assetml-voices-colors-sv -l pl
+Wymowa nazw kolorów w jêzyku szwedzkim.
+
+%package -n assetml-voices-geography-sv
+Summary:        Country name voices in Swedish
+Summary(pl):    Wymowa nazw pañstw w jêzyku szwedzkim
+Group:          X11/Applications/Games
+
+%description -n assetml-voices-geography-sv
+Country name voices in Swedish.
+
+%description -n assetml-voices-geography-sv -l sv
+Wymowa nazw pañstw w jêzyku szwedzkim.
+
+%package -n assetml-voices-misc-sv
+Summary:        Miscelaneous voices in Swedish
+Summary(pl):    Wymowa ró¿nych s³ów w jêzyku szwedzkim
+Group:          X11/Applications/Games
+
+%description -n assetml-voices-misc-sv
+Miscelaneous voices in Swedish.
+
+%description -n assetml-voices-misc-sv -l pl
+Wymowa ró¿nych s³ów w jêzyku szwedzkim.
 
 %package -n assetml-flags
 Summary:	Country flags as 60x40 png files and an assetml description file
@@ -480,6 +526,8 @@ assetml.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
 glib-gettextize --copy --force
@@ -710,6 +758,26 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/gcompris/boards/sounds/ru/misc
 %{_datadir}/assetml/gcompris_misc_ru.assetml
+
+%files -n assetml-voices-alphabet-sv
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/sv/alphabet
+%{_datadir}/assetml/gcompris_alphabet_sv.assetml
+
+%files -n assetml-voices-colors-sv
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/sv/colors
+%{_datadir}/assetml/gcompris_colors_sv.assetml
+
+%files -n assetml-voices-geography-sv
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/sv/geography
+%{_datadir}/assetml/gcompris_geography_sv.assetml
+
+%files -n assetml-voices-misc-sv
+%defattr(644,root,root,755)
+%{_datadir}/gcompris/boards/sounds/sv/misc
+%{_datadir}/assetml/gcompris_misc_sv.assetml
 
 %files -n assetml-flags
 %defattr(644,root,root,755)
