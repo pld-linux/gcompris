@@ -33,6 +33,8 @@ BuildRequires:	python-gnome-devel
 BuildRequires:	tetex
 BuildRequires:	texinfo
 Requires:	assetml-flags
+Requires:	python-gnome-canvas
+Requires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
