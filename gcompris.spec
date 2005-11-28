@@ -93,10 +93,10 @@ Gra jest w³±czana do menu Gry na pulpicie GNOME.
 Warto j± instalowaæ tylko je¶li mamy dzieci u¿ywaj±ce komputera.
 
 %package devel
-Summary:        gcompris development package
-Summary(pl):    Pliki dla programistów gcompris
-Group:          Development/Libraries
-Requires:       %{name} = %{version}-%{release}
+Summary:	gcompris development package
+Summary(pl):	Pliki dla programistów gcompris
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 gcompris development package.
@@ -105,9 +105,9 @@ gcompris development package.
 Pliki dla programistów gcompris.
 
 %package -n assetml-voices-alphabet-da
-Summary:        Alphabet voices in Danish
-Summary(pl):    Wymowa alfabetu w jêzyku duñskim
-Group:          X11/Applications/Games
+Summary:	Alphabet voices in Danish
+Summary(pl):	Wymowa alfabetu w jêzyku duñskim
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-da
 Alphabet voices in Danish.
@@ -116,9 +116,9 @@ Alphabet voices in Danish.
 Wymowa alfabetu w jêzyku duñskim.
 
 %package -n assetml-voices-colors-da
-Summary:        Colors voices in Danish
-Summary(pl):    Wymowa nazw kolorów w jêzyku duñskim
-Group:          X11/Applications/Games 
+Summary:	Colors voices in Danish
+Summary(pl):	Wymowa nazw kolorów w jêzyku duñskim
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-colors-da
 Colors voices in Danish.
@@ -127,9 +127,9 @@ Colors voices in Danish.
 Wymowa nazw kolorów w jêzyku duñskim.
 
 %package -n assetml-voices-geography-da
-Summary:        Country name voices in Danish
-Summary(pl):    Wymowa nazw pañstw w jêzyku duñskim
-Group:          X11/Applications/Games
+Summary:	Country name voices in Danish
+Summary(pl):	Wymowa nazw pañstw w jêzyku duñskim
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-da
 Country name voices in Danish.
@@ -138,9 +138,9 @@ Country name voices in Danish.
 Wymowa nazw pañstw w jêzyku duñskim.
 
 %package -n assetml-voices-misc-da
-Summary:        Miscelaneous voices in Danish
-Summary(pl):    Wymowa ró¿nych s³ów w jêzyku duñskim
-Group:          X11/Applications/Games
+Summary:	Miscelaneous voices in Danish
+Summary(pl):	Wymowa ró¿nych s³ów w jêzyku duñskim
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-da
 Miscelaneous voices in Danish.
@@ -424,9 +424,9 @@ Miscelaneous voices in Portuguese.
 Wymowa ró¿nych s³ów w jêzyku portugalskim.
 
 %package -n assetml-voices-alphabet-ru
-Summary:        Alphabet voices in Russian
-Summary(pl):    Wymowa alfabetu w jêzyku rosyjskim
-Group:          X11/Applications/Games
+Summary:	Alphabet voices in Russian
+Summary(pl):	Wymowa alfabetu w jêzyku rosyjskim
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-ru
 Alphabet voices in Russian.
@@ -435,9 +435,9 @@ Alphabet voices in Russian.
 Wymowa alfabetu w jêzyku rosyjskim.
 
 %package -n assetml-voices-colors-ru
-Summary:        Colors voices in Russian
-Summary(pl):    Wymowa nazw kolorów w jêzyku rosyjskim
-Group:          X11/Applications/Games
+Summary:	Colors voices in Russian
+Summary(pl):	Wymowa nazw kolorów w jêzyku rosyjskim
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-colors-ru
 Colors voices in Russian.
@@ -446,9 +446,9 @@ Colors voices in Russian.
 Wymowa nazw kolorów w jêzyku rosyjskim.
 
 %package -n assetml-voices-geography-ru
-Summary:        Country name voices in Russian
-Summary(pl):    Wymowa nazw pañstw w jêzyku rosyjskim
-Group:          X11/Applications/Games
+Summary:	Country name voices in Russian
+Summary(pl):	Wymowa nazw pañstw w jêzyku rosyjskim
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-ru
 Country name voices in Russian.
@@ -457,9 +457,9 @@ Country name voices in Russian.
 Wymowa nazw pañstw w jêzyku rosyjskim.
 
 %package -n assetml-voices-misc-ru
-Summary:        Miscelaneous voices in Russian
-Summary(pl):    Wymowa ró¿nych s³ów w jêzyku rosyjskim
-Group:          X11/Applications/Games
+Summary:	Miscelaneous voices in Russian
+Summary(pl):	Wymowa ró¿nych s³ów w jêzyku rosyjskim
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-ru
 Miscelaneous voices in Russian.
@@ -468,9 +468,9 @@ Miscelaneous voices in Russian.
 Wymowa ró¿nych s³ów w jêzyku rosyjskim.
 
 %package -n assetml-voices-alphabet-sv
-Summary:        Alphabet voices in Swedish
-Summary(pl):    Wymowa alfabetu w jêzyku szwedzkim
-Group:          X11/Applications/Games
+Summary:	Alphabet voices in Swedish
+Summary(pl):	Wymowa alfabetu w jêzyku szwedzkim
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-alphabet-sv
 Alphabet voices in Swedish.
@@ -490,9 +490,9 @@ Colors voices in Swedish.
 Wymowa nazw kolorów w jêzyku szwedzkim.
 
 %package -n assetml-voices-geography-sv
-Summary:        Country name voices in Swedish
-Summary(pl):    Wymowa nazw pañstw w jêzyku szwedzkim
-Group:          X11/Applications/Games
+Summary:	Country name voices in Swedish
+Summary(pl):	Wymowa nazw pañstw w jêzyku szwedzkim
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-geography-sv
 Country name voices in Swedish.
@@ -501,9 +501,9 @@ Country name voices in Swedish.
 Wymowa nazw pañstw w jêzyku szwedzkim.
 
 %package -n assetml-voices-misc-sv
-Summary:        Miscelaneous voices in Swedish
-Summary(pl):    Wymowa ró¿nych s³ów w jêzyku szwedzkim
-Group:          X11/Applications/Games
+Summary:	Miscelaneous voices in Swedish
+Summary(pl):	Wymowa ró¿nych s³ów w jêzyku szwedzkim
+Group:		X11/Applications/Games
 
 %description -n assetml-voices-misc-sv
 Miscelaneous voices in Swedish.
