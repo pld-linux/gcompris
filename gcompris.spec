@@ -585,7 +585,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gcompris/boards/sounds/melody
 %{_datadir}/gcompris/python
 %dir %{_datadir}/assetml
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_infodir}/*.info*
 %{_pixmapsdir}/*.png
 
