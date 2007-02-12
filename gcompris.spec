@@ -1,5 +1,5 @@
 Summary:	Educational suite for kids 2-10 years old
-Summary(pl):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
+Summary(pl.UTF-8):   Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
 Version:	8.2.2
 Release:	0.9
@@ -52,54 +52,54 @@ The game is included in the GNOME desktop under the Game menu.
 
 You should install it only if you have children using this computer.
 
-%description -l fr
-GCompris / J'ai Compris est un logiciel éducatif pour les enfants à
+%description -l fr.UTF-8
+GCompris / J'ai Compris est un logiciel Ã©ducatif pour les enfants Ã 
 partir de 2 ans.
 
-Aujourd'hui, plusieurs tableaux sont implémentés :
+Aujourd'hui, plusieurs tableaux sont implÃ©mentÃ©s :
 - Cliquer sur les animaux => apprentissage du click et de la souris
 - Entrer les lettres qui tombent => Apprentissage du clavier
-- Les dés qui tombent
+- Les dÃ©s qui tombent
 - Les mots qui tombent
-- Algèbre simple
+- AlgÃ¨bre simple
 - Apprentissage de la lecture de l'heure sur une horloge analogique
-- Puzzle avec des tableaux célèbres
+- Puzzle avec des tableaux cÃ©lÃ¨bres
 - Pilote un avion pour attraper les nuages dans l'ordre
 - Equilibre la balance
 
 Le jeu est inclus dans le bureau GNOME sous le menu Jeux.
 
-À installer si vous avez des enfants utilisant cet ordinateur.
+Ã€ installer si vous avez des enfants utilisant cet ordinateur.
 
-%description -l pl
-GCompris / Zrozumia³em to gra edukacyjna dla dzieci od 2 lat.
+%description -l pl.UTF-8
+GCompris / ZrozumiaÅ‚em to gra edukacyjna dla dzieci od 2 lat.
 Aktualnie zaimplementowane jest kilka plansz:
-- klikanie na zwierzêtach - nauka u¿ywania myszy/klikania
-- wpisywanie spadaj±cych liter - nauka u¿ywania klawiatury
-- spadaj±ce kostki
-- spadaj±ce s³owa
+- klikanie na zwierzÄ™tach - nauka uÅ¼ywania myszy/klikania
+- wpisywanie spadajÄ…cych liter - nauka uÅ¼ywania klawiatury
+- spadajÄ…ce kostki
+- spadajÄ…ce sÅ‚owa
 - podstawowa algebra
 - nauka czasu z zegarkiem analogowym
-- uk³adanka ze s³ynnymi obrazami
-- prowadzenie samolotu z ³apaniem coraz wiêkszej liczby chmur
-- równowa¿enie wagi
-- i wiele wiêcej...
+- ukÅ‚adanka ze sÅ‚ynnymi obrazami
+- prowadzenie samolotu z Å‚apaniem coraz wiÄ™kszej liczby chmur
+- rÃ³wnowaÅ¼enie wagi
+- i wiele wiÄ™cej...
 
-Gra jest w³±czana do menu Gry na pulpicie GNOME.
+Gra jest wÅ‚Ä…czana do menu Gry na pulpicie GNOME.
 
-Warto j± instalowaæ tylko je¶li mamy dzieci u¿ywaj±ce komputera.
+Warto jÄ… instalowaÄ‡ tylko jeÅ›li mamy dzieci uÅ¼ywajÄ…ce komputera.
 
 %package devel
 Summary:	gcompris development package
-Summary(pl):	Pliki dla programistów gcompris
+Summary(pl.UTF-8):   Pliki dla programistÃ³w gcompris
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 gcompris development package.
 
-%description devel -l pl
-Pliki dla programistów gcompris.
+%description devel -l pl.UTF-8
+Pliki dla programistÃ³w gcompris.
 
 %prep
 %setup -q
