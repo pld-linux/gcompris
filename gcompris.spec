@@ -1,5 +1,5 @@
 Summary:	Educational suite for kids 2-10 years old
-Summary(pl.UTF-8):   Zestaw edukacyjny dla dzieci w wieku 2-10 lat
+Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
 Version:	8.2.2
 Release:	0.9
@@ -91,7 +91,7 @@ Warto ją instalować tylko jeśli mamy dzieci używające komputera.
 
 %package devel
 Summary:	gcompris development package
-Summary(pl.UTF-8):   Pliki dla programistów gcompris
+Summary(pl.UTF-8):	Pliki dla programistów gcompris
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
