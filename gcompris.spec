@@ -1,19 +1,22 @@
+# TODO:
+# - probably desktop file need fixes
+# - the game runs only once just after install when gcompris_qlite.db file doesn't exist yet (?)
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
-Version:	8.2.2
-Release:	0.9
-License:	GPL
+Version:	8.4
+Release:	0.1
+License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
-# Source0-md5:	297d6507ed9a4c6558f8bce6b6f81406
+# Source0-md5:	33e5882945f43232953478c93eacf0e6
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://gcompris.net/
-BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
+BuildRequires:	gstreamer-devel
 BuildRequires:	intltool
 BuildRequires:	libao-devel
 BuildRequires:	libgnomeui-devel >= 2.2.0
@@ -147,7 +150,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/lib*.so
 %dir %{_datadir}/gcompris
@@ -156,17 +158,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gcompris/boards/f[iou]*
 %{_datadir}/gcompris/boards/s[cekmu]*
 %dir %{_datadir}/gcompris/boards/sounds
-%{_datadir}/gcompris/boards/sounds/*.ogg
+%{_datadir}/gcompris/boards/sounds/*.wav
+%{_datadir}/gcompris/boards/flags
+%{_datadir}/gcompris/boards/sounds/LuneRouge
 %{_datadir}/gcompris/boards/sounds/chronos
 %{_datadir}/gcompris/boards/sounds/melody
+%{_datadir}/gcompris/boards/sounds/memory
 %{_datadir}/gcompris/python
 %{_desktopdir}/*.desktop
 %{_infodir}/*.info*
+%{_mandir}/man6/*.6.gz
 %{_pixmapsdir}/*.png
-
-%files devel
-%defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/libgcompris-1.0
-%{_pkgconfigdir}/*.pc
