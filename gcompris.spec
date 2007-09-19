@@ -92,18 +92,6 @@ Gra jest włączana do menu Gry na pulpicie GNOME.
 
 Warto ją instalować tylko jeśli mamy dzieci używające komputera.
 
-%package devel
-Summary:	gcompris development package
-Summary(pl.UTF-8):	Pliki dla programistów gcompris
-Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
-
-%description devel
-gcompris development package.
-
-%description devel -l pl.UTF-8
-Pliki dla programistów gcompris.
-
 %prep
 %setup -q
 %patch0 -p1
