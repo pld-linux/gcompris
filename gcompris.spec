@@ -35,6 +35,7 @@ BuildRequires:	tetex
 BuildRequires:	texinfo
 Requires:	python-gnome-canvas
 Requires:	python-modules
+Obsoletes:	gcompris-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -128,11 +129,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
-/sbin/ldconfig
 
 %postun
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
-/sbin/ldconfig
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
@@ -155,5 +154,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gcompris/python
 %{_desktopdir}/*.desktop
 %{_infodir}/*.info*
-%{_mandir}/man6/*.6.gz
+%{_mandir}/man6/*.6*
 %{_pixmapsdir}/*.png
