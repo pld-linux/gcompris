@@ -1,7 +1,19 @@
---- gcompris-8.4/gcompris.desktop.in~	2007-09-18 20:18:01.000000000 +0200
-+++ gcompris-8.4/gcompris.desktop.in	2007-09-18 20:17:05.000000000 +0200
-@@ -7,7 +7,7 @@
- Icon=gcompris.png
+--- gcompris-8.4.1/gcompris.desktop.in~	2007-10-16 20:12:58.000000000 +0200
++++ gcompris-8.4.1/gcompris.desktop.in	2007-10-16 20:12:32.000000000 +0200
+@@ -1,14 +1,18 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+-_Name=Educational suite GCompris
+-_GenericName=Multi-activity educational game
+-_Comment=Educational game for ages 2 to 10
++Name=Educational suite GCompris
++Name[pl]=Zestaw edukacyjny GCompris
++GenericName=Multi-activity educational game
++GenericName[pl]=Gra edukacyjna z wieloma ćwiczeniami
++Comment=Educational game for ages 2 to 10
++Comment[pl]=Gra edukacyjna dla dzieci w wieku 2 - 10 lat
+ Exec=gcompris
+ Icon=gcompris
  Terminal=false
  Type=Application
 -Categories=Game;KidsGame;
@@ -9,10 +21,20 @@
  StartupNotify=true
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=gcompris
---- gcompris-8.4/gcompris-edit.desktop.in~	2007-09-18 20:14:20.000000000 +0200
-+++ gcompris-8.4/gcompris-edit.desktop.in	2007-09-18 20:18:48.000000000 +0200
-@@ -6,7 +6,7 @@
- Icon=gcompris-edit.png
+ X-GNOME-Bugzilla-Component=
++# vi: encoding=utf-8
+--- gcompris-8.4.1/gcompris-edit.desktop.in~	2007-10-16 20:13:01.000000000 +0200
++++ gcompris-8.4.1/gcompris-edit.desktop.in	2007-10-16 20:12:52.000000000 +0200
+@@ -1,13 +1,16 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+ Name=GCompris Administration
+-_Comment=Administration for gcompris
++Name[pl]=Zarządzanie GCompris
++Comment=Administration for gcompris
++Comment[pl]=Zarządzanie dla gcompris
+ Exec=gcompris -a --nolockcheck
+ Icon=gcompris-edit
  Terminal=false
  Type=Application
 -Categories=Education;
@@ -20,3 +42,5 @@
  StartupNotify=true
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=gcompris
+ X-GNOME-Bugzilla-Component=
++# vi: encoding=utf-8
