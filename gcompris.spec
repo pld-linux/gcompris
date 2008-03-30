@@ -1,12 +1,18 @@
+#
+# TODO
+# - dozen of unpackaged files
+# - check if does it work
+#
+%define	_pre	PRE1
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
-Version:	8.4.2
-Release:	1
+Version:	8.5
+Release:	0.%{_pre}.1
 License:	GPL v3+
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
-# Source0-md5:	226508072c72c0d78a66e918ef82715d
+Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}%{_pre}.tar.gz
+# Source0-md5:	e47173e7b14465e88d6063a0a0324a9a
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://gcompris.net/
@@ -26,6 +32,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
 BuildRequires:	python-devel
 BuildRequires:	python-gnome-devel
+BuildRequires:	python-pycairo-devel
 BuildRequires:	python-sqlite
 BuildRequires:	sqlite3-devel
 BuildRequires:	tetex
@@ -91,7 +98,7 @@ Gra jest włączana do menu Gry na pulpicie GNOME.
 Warto ją instalować tylko jeśli mamy dzieci używające komputera.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{_pre}
 %patch0 -p1
 %patch1 -p1
 
@@ -144,10 +151,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/gcompris/boards/sounds
 %{_datadir}/gcompris/boards/sounds/*.wav
 %{_datadir}/gcompris/boards/flags
-%{_datadir}/gcompris/boards/sounds/LuneRouge
-%{_datadir}/gcompris/boards/sounds/chronos
-%{_datadir}/gcompris/boards/sounds/melody
-%{_datadir}/gcompris/boards/sounds/memory
 %{_datadir}/gcompris/python
 %{_desktopdir}/*.desktop
 %{_infodir}/*.info*
