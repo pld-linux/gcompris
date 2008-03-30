@@ -1,7 +1,7 @@
 #
 # TODO
 # - dozen of unpackaged files
-# - check if does it work
+# - check if it works
 #
 %define	_pre	PRE1
 Summary:	Educational suite for kids 2-10 years old
