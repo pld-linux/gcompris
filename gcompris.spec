@@ -1,3 +1,5 @@
+# TODO
+# - error: gcompris-8.4.2-1: req /usr/share/locale/ar_TN/LC_MESSAGES not found
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
