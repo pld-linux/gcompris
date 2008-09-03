@@ -38,6 +38,7 @@ BuildRequires:	texinfo
 BuildRequires:	xorg-lib-libXxf86vm-devel
 Requires:	python-gnome-canvas
 Requires:	python-modules
+Requires:	python-sqlite
 Suggests:	gnuchess
 Obsoletes:	gcompris-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
