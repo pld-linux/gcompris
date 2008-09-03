@@ -36,10 +36,14 @@ BuildRequires:	sqlite3-devel
 BuildRequires:	tetex
 BuildRequires:	texinfo
 BuildRequires:	xorg-lib-libXxf86vm-devel
+Requires:	gstreamer-audio-formats
+Requires:	gstreamer-audiosink
+Requires:	gstreamer-vorbis
 Requires:	python-gnome-canvas
 Requires:	python-modules
 Requires:	python-sqlite
 Suggests:	gnuchess
+Suggests:	tuxpaint
 Obsoletes:	gcompris-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
