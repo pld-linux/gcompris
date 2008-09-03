@@ -1,18 +1,23 @@
+#
+# Conditional build:
+%bcond_without	gnet	# build without gnet support (disallow GCompris fetch content from a web server)
+#
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
-Version:	8.4.2
+Version:	8.4.6
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
-# Source0-md5:	226508072c72c0d78a66e918ef82715d
+# Source0-md5:	fc8d8364b8faf77be8281d90af66a481
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://gcompris.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
+BuildRequires:	gnet-devel
 BuildRequires:	gstreamer-devel
 BuildRequires:	intltool
 BuildRequires:	libao-devel
@@ -30,8 +35,10 @@ BuildRequires:	python-sqlite
 BuildRequires:	sqlite3-devel
 BuildRequires:	tetex
 BuildRequires:	texinfo
+BuildRequires:	xorg-lib-libXxf86vm-devel
 Requires:	python-gnome-canvas
 Requires:	python-modules
+Suggests:	gnuchess
 Obsoletes:	gcompris-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -96,16 +103,17 @@ Warto ją instalować tylko jeśli mamy dzieci używające komputera.
 %patch1 -p1
 
 %build
-cp /usr/share/gettext/config.rpath .
-glib-gettextize --copy --force
-intltoolize --copy --force
+cp %{_datadir}/gettext/config.rpath .
+%{__glib_gettextize}
+%{__intltoolize}
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
 %{__automake}
 %configure \
-	GNUCHESS="%{_bindir}/gnuchess"
+	GNUCHESS="%{_bindir}/gnuchess" \
+	--%{!?with_gnet:dis}%{?with_gnet:en}able-gnet
 %{__make}
 
 %install
@@ -118,6 +126,10 @@ rm -rf $RPM_BUILD_ROOT
 cp -f docs/C/gcompris.info $RPM_BUILD_ROOT%{_infodir}/gcompris.info
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/*.la
+
+# remove unpackaged files
+rm -f $RPM_BUILD_ROOT%{_datadir}/info/dir
+rm -f $RPM_BUILD_ROOT%{_prefix}/lib/menu/%{name}
 
 %find_lang %{name} --with-gnome
 
@@ -137,17 +149,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/lib*.so
 %dir %{_datadir}/gcompris
-%dir %{_datadir}/gcompris/boards
-%{_datadir}/gcompris/boards/[!fs]*
-%{_datadir}/gcompris/boards/f[iou]*
-%{_datadir}/gcompris/boards/s[cekmu]*
-%dir %{_datadir}/gcompris/boards/sounds
-%{_datadir}/gcompris/boards/sounds/*.wav
-%{_datadir}/gcompris/boards/flags
-%{_datadir}/gcompris/boards/sounds/LuneRouge
-%{_datadir}/gcompris/boards/sounds/chronos
-%{_datadir}/gcompris/boards/sounds/melody
-%{_datadir}/gcompris/boards/sounds/memory
+%{_datadir}/gcompris/boards
 %{_datadir}/gcompris/python
 %{_desktopdir}/*.desktop
 %{_infodir}/*.info*
