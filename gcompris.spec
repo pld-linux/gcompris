@@ -1,16 +1,19 @@
 #
+# TODO: use our goocanvas library
+#
 # Conditional build:
 %bcond_without	gnet	# build without gnet support (disallow GCompris fetch content from a web server)
 #
+%define	_pre	PRE2
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
-Version:	8.4.8
-Release:	1
+Version:	8.5
+Release:	0.%{_pre}.1
 License:	GPL v3+
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
-# Source0-md5:	d46c014c8f13505f94a5756f05cca12e
+Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}%{_pre}.tar.gz
+# Source0-md5:	3d1fc093b0a4df687ea6bd502ad7d871
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://gcompris.net/
@@ -23,6 +26,7 @@ BuildRequires:	intltool
 BuildRequires:	libao-devel
 BuildRequires:	libgnomeui-devel >= 2.2.0
 BuildRequires:	libogg-devel
+BuildRequires:	librsvg-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	libvorbis-devel
@@ -31,6 +35,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
 BuildRequires:	python-devel
 BuildRequires:	python-gnome-devel
+BuildRequires:	python-pycairo-devel
 BuildRequires:	python-sqlite
 BuildRequires:	sqlite3-devel
 BuildRequires:	tetex
@@ -103,7 +108,7 @@ Gra jest włączana do menu Gry na pulpicie GNOME.
 Warto ją instalować tylko jeśli mamy dzieci używające komputera.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{_pre}
 %patch0 -p1
 %patch1 -p1
 
