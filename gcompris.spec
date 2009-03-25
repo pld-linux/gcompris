@@ -35,6 +35,7 @@ BuildRequires:	python-sqlite
 BuildRequires:	sqlite3-devel
 BuildRequires:	tetex
 BuildRequires:	texinfo
+BuildRequires:	texi2html
 BuildRequires:	xorg-lib-libXxf86vm-devel
 Requires:	gstreamer-audio-formats
 Requires:	gstreamer-audiosink
