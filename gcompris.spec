@@ -4,7 +4,7 @@
 # Conditional build:
 %bcond_without	gnet	# build without gnet support (disallow GCompris fetch content from a web server)
 #
-%define	_pre	PRE2
+%define	_pre	PRE3
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
@@ -13,7 +13,7 @@ Release:	0.%{_pre}.1
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}%{_pre}.tar.gz
-# Source0-md5:	3d1fc093b0a4df687ea6bd502ad7d871
+# Source0-md5:	d12eecb4b828bcd28f2d1c40b5aaaa77
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://gcompris.net/
