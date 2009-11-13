@@ -1,5 +1,5 @@
 #
-# TODO: use our goocanvas library
+# TODO: gcompris uses its own goocanvas libraries with some specific changes, but do we need to include them into /usr/lib?
 #
 # Conditional build:
 %bcond_without	gnet	# build without gnet support (disallow GCompris fetch content from a web server)
@@ -9,13 +9,14 @@ Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
 Version:	8.5
-Release:	0.%{_pre}.1
+Release:	0.%{_pre}.2
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}%{_pre}.tar.gz
 # Source0-md5:	d12eecb4b828bcd28f2d1c40b5aaaa77
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-desktop.patch
+Patch2:		%{name}-goocanvas.patch
 URL:		http://gcompris.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -111,6 +112,9 @@ Warto ją instalować tylko jeśli mamy dzieci używające komputera.
 %setup -q -n %{name}-%{version}%{_pre}
 %patch0 -p1
 %patch1 -p1
+#%%patch2 -p1
+
+%{__sed} -i 's,-Werror,,' configure.in
 
 %build
 cp %{_datadir}/gettext/config.rpath .
