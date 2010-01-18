@@ -20,6 +20,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gnet-devel
+BuildRequires:	gnome-common
 BuildRequires:	gstreamer-devel
 BuildRequires:	intltool
 BuildRequires:	libao-devel
