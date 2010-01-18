@@ -1,16 +1,18 @@
 #
+# TODO: gcompris uses its own goocanvas libraries with some specific changes, but do we need to include them into /usr/lib?
+#
 # Conditional build:
 %bcond_without	gnet	# build without gnet support (disallow GCompris fetch content from a web server)
 #
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
-Version:	8.4.13
+Version:	9.0
 Release:	0.1
 License:	GPL v3+
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
-# Source0-md5:	d4768c2c471da4f1eb12a82d37f54dc1
+Source0:	http://downloads.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
+# Source0-md5:	d39b0fc879b8c3689140360e32eed711
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://gcompris.net/
@@ -23,6 +25,7 @@ BuildRequires:	intltool
 BuildRequires:	libao-devel
 BuildRequires:	libgnomeui-devel >= 2.2.0
 BuildRequires:	libogg-devel
+BuildRequires:	librsvg-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	libvorbis-devel
@@ -31,9 +34,10 @@ BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
 BuildRequires:	python-devel
 BuildRequires:	python-gnome-devel
+BuildRequires:	python-pycairo-devel
 BuildRequires:	python-sqlite
 BuildRequires:	sqlite3-devel
-#BuildRequires:	tetex
+BuildRequires:	tetex
 BuildRequires:	texi2html
 BuildRequires:	texinfo
 BuildRequires:	xorg-lib-libXxf86vm-devel
@@ -159,5 +163,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gcompris/python
 %{_desktopdir}/*.desktop
 %{_infodir}/*.info*
+# gcompris uses its own goocanvas libraries with some specific changes
+%attr(755,root,root) %{_libdir}/gcompris/libgoocanvas.so.0
+%attr(755,root,root) %{_libdir}/gcompris/libgoocanvas.so.0.0.0
 %{_mandir}/man6/gcompris.*
 %{_pixmapsdir}/*.png
