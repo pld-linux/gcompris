@@ -4,16 +4,15 @@
 # Conditional build:
 %bcond_without	gnet	# build without gnet support (disallow GCompris fetch content from a web server)
 #
-%define	_pre	PRE3
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
-Version:	8.5
-Release:	0.%{_pre}.1
+Version:	9.0
+Release:	0.1
 License:	GPL v3+
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/gcompris/%{name}-%{version}%{_pre}.tar.gz
-# Source0-md5:	d12eecb4b828bcd28f2d1c40b5aaaa77
+Source0:	http://downloads.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
+# Source0-md5:	d39b0fc879b8c3689140360e32eed711
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://gcompris.net/
@@ -39,6 +38,7 @@ BuildRequires:	python-pycairo-devel
 BuildRequires:	python-sqlite
 BuildRequires:	sqlite3-devel
 BuildRequires:	tetex
+BuildRequires:	texi2html
 BuildRequires:	texinfo
 BuildRequires:	xorg-lib-libXxf86vm-devel
 Requires:	gstreamer-audio-formats
@@ -108,7 +108,7 @@ Gra jest włączana do menu Gry na pulpicie GNOME.
 Warto ją instalować tylko jeśli mamy dzieci używające komputera.
 
 %prep
-%setup -q -n %{name}-%{version}%{_pre}
+%setup -q
 %patch0 -p1
 %patch1 -p1
 
@@ -163,5 +163,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gcompris/python
 %{_desktopdir}/*.desktop
 %{_infodir}/*.info*
-%{_mandir}/man6/*.6*
+# gcompris uses its own goocanvas libraries with some specific changes
+%attr(755,root,root) %{_libdir}/gcompris/libgoocanvas.so.0
+%attr(755,root,root) %{_libdir}/gcompris/libgoocanvas.so.0.0.0
+%{_mandir}/man6/gcompris.*
 %{_pixmapsdir}/*.png
