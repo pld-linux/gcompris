@@ -24,7 +24,6 @@ BuildRequires:	gnome-common
 BuildRequires:	gstreamer-devel
 BuildRequires:	intltool
 BuildRequires:	libao-devel
-BuildRequires:	libgnomeui-devel >= 2.2.0
 BuildRequires:	libogg-devel
 BuildRequires:	librsvg-devel
 BuildRequires:	libstdc++-devel
@@ -34,14 +33,12 @@ BuildRequires:	libxml2-devel
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
 BuildRequires:	python-devel
-BuildRequires:	python-gnome-devel
 BuildRequires:	python-pycairo-devel
+BuildRequires:	python-pygtk-devel
 BuildRequires:	python-sqlite
 BuildRequires:	sqlite3-devel
-BuildRequires:	tetex
 BuildRequires:	texi2html
 BuildRequires:	texinfo
-BuildRequires:	xorg-lib-libXxf86vm-devel
 Requires:	gstreamer-audio-formats
 Requires:	gstreamer-audiosink
 Requires:	gstreamer-vorbis
