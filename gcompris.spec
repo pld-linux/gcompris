@@ -6,7 +6,7 @@ Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
 Version:	9.5
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://downloads.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
@@ -132,9 +132,6 @@ rm -rf $RPM_BUILD_ROOT
 cp -a docs/C/gcompris.info $RPM_BUILD_ROOT%{_infodir}/gcompris.info
 
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/%{name}/*.la
-
-# remove unpackaged files
-%{__rm} $RPM_BUILD_ROOT%{_datadir}/info/dir
 
 %find_lang %{name} --with-gnome
 
