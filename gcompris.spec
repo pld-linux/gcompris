@@ -5,12 +5,12 @@
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
-Version:	9.3
+Version:	9.5
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://downloads.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
-# Source0-md5:	b563e412751e909e9e89d0c396f01f04
+# Source0-md5:	1653285f04a8bac4b73fc4243f7810f9
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://gcompris.net/
@@ -129,13 +129,12 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 # replace fr with en one
-cp -f docs/C/gcompris.info $RPM_BUILD_ROOT%{_infodir}/gcompris.info
+cp -a docs/C/gcompris.info $RPM_BUILD_ROOT%{_infodir}/gcompris.info
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/*.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/%{name}/*.la
 
 # remove unpackaged files
-rm -f $RPM_BUILD_ROOT%{_datadir}/info/dir
-rm -f $RPM_BUILD_ROOT%{_prefix}/lib/menu/%{name}
+%{__rm} $RPM_BUILD_ROOT%{_datadir}/info/dir
 
 %find_lang %{name} --with-gnome
 
@@ -150,7 +149,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README THANKS TODO
+%doc AUTHORS ChangeLog README README.translators THANKS TODO
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/lib*.so
