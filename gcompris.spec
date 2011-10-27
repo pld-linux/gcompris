@@ -5,12 +5,12 @@
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
-Version:	9.6.1
+Version:	11.09
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://downloads.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
-# Source0-md5:	2fb1dbb331166dd19d0a758220e4caf0
+# Source0-md5:	b0066d5e0bb4e2fbb7380f723b51c598
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://gcompris.net/
@@ -23,7 +23,7 @@ BuildRequires:	gstreamer-devel
 BuildRequires:	intltool
 BuildRequires:	libao-devel
 BuildRequires:	libogg-devel
-BuildRequires:	librsvg-devel
+BuildRequires:	librsvg-devel >= 1:2.34.1
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	libvorbis-devel
@@ -119,7 +119,8 @@ cp %{_datadir}/gettext/config.rpath .
 %{__automake}
 %configure \
 	GNUCHESS="%{_bindir}/gnuchess" \
-	--%{!?with_gnet:dis}%{?with_gnet:en}able-gnet
+	--%{!?with_gnet:dis}%{?with_gnet:en}able-gnet \
+	--disable-silent-rules
 %{__make}
 
 %install
