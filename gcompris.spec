@@ -16,7 +16,7 @@ Patch1:		%{name}-desktop.patch
 URL:		http://gcompris.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gnet-devel
 BuildRequires:	gnome-common
 BuildRequires:	gstreamer-devel
