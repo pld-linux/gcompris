@@ -108,6 +108,8 @@ Warto ją instalować tylko jeśli mamy dzieci używające komputera.
 %patch0 -p1
 %patch1 -p1
 
+%{__sed} -i -e 's/-Werror -O2//' configure.ac
+
 %build
 cp %{_datadir}/gettext/config.rpath .
 %{__glib_gettextize}
