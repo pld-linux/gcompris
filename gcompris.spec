@@ -1,7 +1,8 @@
 #
 # Conditional build:
 %bcond_without	gnet	# build without gnet support (disallow GCompris fetch content from a web server)
-#
+%bcond_with	info	# build info doc
+
 Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
@@ -124,16 +125,20 @@ cp %{_datadir}/gettext/config.rpath .
 	GNUCHESS="%{_bindir}/gnuchess" \
 	--%{!?with_gnet:dis}%{?with_gnet:en}able-gnet \
 	--disable-silent-rules
-%{__make}
+%{__make} \
+	%{!?with_info:INFO_DEPS=}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
+	%{!?with_info:INFO_DEPS=} \
 	DESTDIR=$RPM_BUILD_ROOT
 
 # replace fr with en one
-cp -a docs/C/gcompris.info $RPM_BUILD_ROOT%{_infodir}/gcompris.info
+%if %{with info}
+cp -p docs/C/gcompris.info $RPM_BUILD_ROOT%{_infodir}/gcompris.info
+%endif
 
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/%{name}/*.la
 
@@ -145,11 +150,13 @@ cp -a docs/C/gcompris.info $RPM_BUILD_ROOT%{_infodir}/gcompris.info
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%if %{with info}
 %post	-p	/sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %postun	-p	/sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
+%endif
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
@@ -161,7 +168,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gcompris/boards
 %{_datadir}/gcompris/python
 %{_desktopdir}/*.desktop
-%{_infodir}/*.info*
+%{?with_info:%{_infodir}/*.info*}
 # gcompris uses its own goocanvas libraries with some specific changes
 %attr(755,root,root) %{_libdir}/gcompris/libgoocanvas.so.0
 %attr(755,root,root) %{_libdir}/gcompris/libgoocanvas.so.0.0.0
