@@ -109,6 +109,7 @@ Warto ją instalować tylko jeśli mamy dzieci używające komputera.
 %patch1 -p1
 
 %{__sed} -i -e 's/-Werror -O2//' configure.ac
+%{__sed} -i -e 's/-DG_DISABLE_DEPRECATED//' src/goocanvas/src/Makefile.am
 
 %build
 cp %{_datadir}/gettext/config.rpath .
@@ -137,7 +138,7 @@ cp -a docs/C/gcompris.info $RPM_BUILD_ROOT%{_infodir}/gcompris.info
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/%{name}/*.la
 
 # unsupported
-%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/sr_ME
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/sr_ME
 
 %find_lang %{name} --with-gnome
 
