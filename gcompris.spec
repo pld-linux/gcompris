@@ -104,6 +104,16 @@ Gra jest włączana do menu Gry na pulpicie GNOME.
 
 Warto ją instalować tylko jeśli mamy dzieci używające komputera.
 
+%package data
+Summary:	GCompris data files
+Group:		Applications/Games
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description data
+GCompris data files.
+
 %package sound-af
 Summary:	GCompris voices in Afrikaans
 Group:		Applications/Games
@@ -575,10 +585,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/lib*.so
-%dir %{_datadir}/gcompris
-%{_datadir}/gcompris/boards
-%exclude %{_datadir}/%{name}/boards/voices/*
-%{_datadir}/gcompris/python
 %{_desktopdir}/*.desktop
 %{?with_info:%{_infodir}/*.info*}
 # gcompris uses its own goocanvas libraries with some specific changes
@@ -586,6 +592,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/gcompris/libgoocanvas.so.0.0.0
 %{_mandir}/man6/gcompris.*
 %{_pixmapsdir}/*.png
+
+%files data
+%defattr(644,root,root,755)
+%dir %{_datadir}/gcompris
+%{_datadir}/gcompris/boards
+%exclude %{_datadir}/%{name}/boards/voices/*
+%{_datadir}/gcompris/python
 
 %files sound-af
 %defattr(644,root,root,755)
