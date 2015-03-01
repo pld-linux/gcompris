@@ -7,7 +7,7 @@ Summary:	Educational suite for kids 2-10 years old
 Summary(pl.UTF-8):	Zestaw edukacyjny dla dzieci w wieku 2-10 lat
 Name:		gcompris
 Version:	11.09
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://downloads.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
@@ -104,6 +104,418 @@ Gra jest włączana do menu Gry na pulpicie GNOME.
 
 Warto ją instalować tylko jeśli mamy dzieci używające komputera.
 
+%package sound-af
+Summary:	GCompris voices in Afrikaans
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-af
+Voice samples for the GCompris games in Afrikaans.
+
+%package sound-ar
+Summary:	GCompris voices in Arabic (Tunisia)
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-ar
+Voice samples for the GCompris games in Arabic (Tunisia).
+
+%package sound-ast
+Summary:	GCompris voices in Asturian
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-ast
+Voice samples for the GCompris games in Asturian.
+
+%package sound-bg
+Summary:	GCompris voices in Bulgarian
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-bg
+Voice samples for the GCompris games in Bulgarian.
+
+%package sound-br
+Summary:	GCompris voices in Breton
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-br
+Voice samples for the GCompris games in Breton.
+
+%package sound-cs
+Summary:	GCompris voices in Tsjech
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-cs
+Voice samples for the GCompris games in Tsjech.
+
+%package sound-da
+Summary:	GCompris voices in Danish
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-da
+Voice samples for the GCompris games in Danish.
+
+%package sound-de
+Summary:	GCompris voices in German
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-de
+Voice samples for the GCompris games in German.
+
+%package sound-el
+Summary:	GCompris voices in Greek
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-el
+Voice samples for the GCompris games in Greek.
+
+%package sound-en
+Summary:	GCompris voices in English
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-en
+Voice samples for the GCompris games in English.
+
+%package sound-eo
+Summary:	GCompris voices in Esperanto
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-eo
+Voice samples for the GCompris games in Esperanto.
+
+%package sound-es
+Summary:	GCompris voices in Spanish
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-es
+Voice samples for the GCompris games in Spanish.
+
+%package sound-eu
+Summary:	GCompris voices in Basque
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-eu
+Voice samples for the GCompris games in Basque.
+
+%package sound-fi
+Summary:	GCompris voices in Finish
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-fi
+Voice samples for the GCompris games in Finish.
+
+%package sound-fr
+Summary:	GCompris voices in French
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+BuildArch:	noarch
+
+%description sound-fr
+Voice samples for the GCompris games in French.
+
+%package sound-gd
+Summary:	GCompris voices in Scottish Gaelic
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-gd
+Voice samples for the GCompris games in Scottish Gaelic.
+
+%package sound-he
+Summary:	GCompris voices in Hebrew
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-he
+Voice samples for the GCompris games in Hebrew.
+
+%package sound-hi
+Summary:	GCompris voices in Hindi
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-hi
+Voice samples for the GCompris games in Hindi.
+
+%package sound-hu
+Summary:	GCompris voices in Hungarian
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-hu
+Voice samples for the GCompris games in Hungarian.
+
+%package sound-id
+Summary:	GCompris voices in Indonesian
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-id
+Voice samples for the GCompris games in Indonesian.
+
+%package sound-it
+Summary:	GCompris voices in Italian
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-it
+Voice samples for the GCompris games in Italian.
+
+%package sound-lt
+Summary:	GCompris voices in Lithuanian
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-lt
+Voice samples for the GCompris games in Lithuanian.
+
+%package sound-mr
+Summary:	GCompris voices in Indian Marathi
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-mr
+Voice samples for the GCompris games in Indian Marathi.
+
+%package sound-nb
+Summary:	GCompris voices in Norwegian
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-nb
+Voice samples for the GCompris games in Norwegian.
+
+%package sound-nl
+Summary:	GCompris voices in Dutch
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-nl
+Voice samples for the GCompris games in Dutch.
+
+%package sound-nn
+Summary:	GCompris voices in Norwegian Nynorsk
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-nn
+Voice samples for the GCompris games in Norwegian Nynorsk.
+
+%package sound-pa
+Summary:	GCompris voices in Punjabi
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-pa
+Voice samples for the GCompris games in Punjabi.
+
+%package sound-pt
+Summary:	GCompris voices in Portuguese
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-pt
+Voice samples for the GCompris games in Portuguese.
+
+%package sound-ru
+Summary:	GCompris voices in Russian
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-ru
+Voice samples for the GCompris games in Russian.
+
+%package sound-sk
+Summary:	GCompris voices in Slovak
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-sk
+Voice samples for the GCompris games in Slovak.
+
+%package sound-sl
+Summary:	GCompris voices in Slovenian
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-sl
+Voice samples for the GCompris games in Slovenian.
+
+%package sound-so
+Summary:	GCompris voices in Somali
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-so
+Voice samples for the GCompris games in Somali.
+
+%package sound-sr
+Summary:	GCompris voices in Serbian
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-sr
+Voice samples for the GCompris games in Serbian.
+
+%package sound-sv
+Summary:	GCompris voices in Swedish
+Group:		Applications/Games
+Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-sv
+Voice samples for the GCompris games in Swedish.
+
+%package sound-th
+Summary:	GCompris voices in Thai
+Group:		Applications/Games
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-th
+Voice samples for the GCompris games in Thai.
+
+%package sound-tr
+Summary:	GCompris voices in Turk
+Group:		Applications/Games
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-tr
+Voice samples for the GCompris games in Turk.
+
+%package sound-ur
+Summary:	GCompris voices in Urdu
+Group:		Applications/Games
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-ur
+Voice samples for the GCompris games in Urdu.
+
+%package sound-zh_CN
+Summary:	GCompris voices in Chinese, Simplified
+Group:		Applications/Games
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description sound-zh_CN
+Voice samples for the GCompris games in Chinese, Simplified.
+
 %prep
 %setup -q
 %patch0 -p1
@@ -130,7 +542,6 @@ cp %{_datadir}/gettext/config.rpath .
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	%{!?with_info:INFO_DEPS=} \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -166,6 +577,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/%{name}/lib*.so
 %dir %{_datadir}/gcompris
 %{_datadir}/gcompris/boards
+%exclude %{_datadir}/%{name}/boards/voices/*
 %{_datadir}/gcompris/python
 %{_desktopdir}/*.desktop
 %{?with_info:%{_infodir}/*.info*}
@@ -174,3 +586,156 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/gcompris/libgoocanvas.so.0.0.0
 %{_mandir}/man6/gcompris.*
 %{_pixmapsdir}/*.png
+
+%files sound-af
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/af
+
+%files sound-ar
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/ar
+
+%files sound-ast
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/ast
+
+%files sound-bg
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/bg
+
+%files sound-br
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/br
+
+%files sound-cs
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/cs
+
+%files sound-da
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/da
+
+%files sound-de
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/de
+
+%files sound-el
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/el
+
+%files sound-en
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/en
+
+%files sound-eo
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/eo
+
+%files sound-es
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/es
+
+%files sound-eu
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/eu
+
+%files sound-fi
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/fi
+
+%files sound-fr
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/fr
+
+#%files sound-gd
+#%defattr(644,root,root,755)
+#%{_datadir}/%{name}/boards/voices/gd
+
+%files sound-he
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/he
+
+%files sound-hi
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/hi
+
+%files sound-hu
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/hu
+
+%files sound-id
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/id
+
+%files sound-it
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/it
+
+#%files sound-lt
+#%defattr(644,root,root,755)
+#%{_datadir}/%{name}/boards/voices/lt
+
+%files sound-mr
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/mr
+
+%files sound-nb
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/nb
+
+%files sound-nl
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/nl
+
+%files sound-nn
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/nn
+
+%files sound-pa
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/pa
+
+%files sound-pt
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/pt
+%{_datadir}/%{name}/boards/voices/pt_BR
+
+%files sound-ru
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/ru
+
+#%files sound-sk
+#%defattr(644,root,root,755)
+#%{_datadir}/%{name}/boards/voices/sk
+
+%files sound-sl
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/sl
+
+%files sound-so
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/so
+
+%files sound-sr
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/sr
+
+%files sound-sv
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/sv
+
+%files sound-th
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/th
+
+%files sound-tr
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/tr
+
+%files sound-ur
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/ur
+
+%files sound-zh_CN
+%defattr(644,root,root,755)
+%{_datadir}/%{name}/boards/voices/zh_CN
