@@ -632,18 +632,14 @@ cp %{_datadir}/gettext/config.rpath .
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	%{!?with_info:INFO_DEPS=} \
 	DESTDIR=$RPM_BUILD_ROOT
 
-# replace fr with en one
-%if %{with info}
-cp -p docs/C/gcompris.info $RPM_BUILD_ROOT%{_infodir}/gcompris.info
-%endif
-
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/%{name}/*.la
 
-# unsupported
+# unsupported (latin, sr_ME in glibc is cyrillic)
 %{__rm} -r $RPM_BUILD_ROOT%{_localedir}/sr_ME
 
 %find_lang %{name} --with-gnome
@@ -652,10 +648,10 @@ cp -p docs/C/gcompris.info $RPM_BUILD_ROOT%{_infodir}/gcompris.info
 rm -rf $RPM_BUILD_ROOT
 
 %if %{with info}
-%post	-p	/sbin/postshell
+%post	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun	-p	/sbin/postshell
+%postun	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 %endif
 
