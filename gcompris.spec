@@ -662,16 +662,17 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README README.translators THANKS TODO
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/gcompris
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/lib*.so
-%{_desktopdir}/*.desktop
-%{?with_info:%{_infodir}/*.info*}
+%{_desktopdir}/gcompris.desktop
+%{_desktopdir}/gcompris-edit.desktop
+%{?with_info:%{_infodir}/gcompris.info*}
 # gcompris uses its own goocanvas libraries with some specific changes
-%attr(755,root,root) %{_libdir}/gcompris/libgoocanvas.so.0
-%attr(755,root,root) %{_libdir}/gcompris/libgoocanvas.so.0.0.0
-%{_mandir}/man6/gcompris.*
-%{_pixmapsdir}/*.png
+%attr(755,root,root) %{_libdir}/gcompris/libgoocanvas.so.*
+%{_mandir}/man6/gcompris.6*
+%{_pixmapsdir}/gcompris.png
+%{_pixmapsdir}/gcompris-edit.png
 
 %files data
 %defattr(644,root,root,755)
