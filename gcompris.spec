@@ -1,3 +1,4 @@
+# TODO: --enable-sugar (polyol-toolkit)
 #
 # Conditional build:
 %bcond_without	gnet	# build without gnet support (disallow GCompris fetch content from a web server)
@@ -15,38 +16,33 @@ Source0:	https://downloads.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-desktop.patch
 URL:		https://gcompris.net/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	gettext-tools
-BuildRequires:	gnet-devel
+BuildRequires:	gnet-devel >= 2.0
 BuildRequires:	gnome-common
-BuildRequires:	gstreamer-devel
-BuildRequires:	intltool
-BuildRequires:	libao-devel
-BuildRequires:	libogg-devel
+BuildRequires:	gstreamer0.10-devel >= 0.10
+BuildRequires:	gtk+2-devel >= 2:2.12.0
+BuildRequires:	intltool >= 0.35.0
 BuildRequires:	librsvg-devel >= 1:2.34.1
-BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
-BuildRequires:	libvorbis-devel
-BuildRequires:	libxml2-devel
+BuildRequires:	libxml2-devel >= 1:2.6.16
 BuildRequires:	pkgconfig
-BuildRequires:	popt-devel >= 1.5
-BuildRequires:	python-devel
+BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-pycairo-devel
-BuildRequires:	python-pygtk-devel
-BuildRequires:	python-sqlite
+BuildRequires:	python-pygtk-devel >= 2:2.0
 BuildRequires:	sqlite3-devel
 BuildRequires:	texi2html
 BuildRequires:	texinfo
-Requires:	gstreamer-audio-formats
-Requires:	gstreamer-audiosink
-Requires:	gstreamer-vorbis
+BuildRequires:	xorg-lib-libX11-devel
+Requires:	gstreamer0.10-audio-formats >= 0.10
+Requires:	gstreamer0.10-audiosink >= 0.10
+Requires:	gstreamer0.10-vorbis >= 0.10
 Requires:	python-gnome-canvas
-Requires:	python-modules
-Requires:	python-sqlite
+Requires:	python-modules >= 1:2.5
 Suggests:	gnuchess
 Suggests:	tuxpaint
-Obsoletes:	gcompris-devel
+Obsoletes:	gcompris-devel < 8.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -619,13 +615,13 @@ cp %{_datadir}/gettext/config.rpath .
 %{__glib_gettextize}
 %{__intltoolize}
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
 %configure \
 	GNUCHESS="%{_bindir}/gnuchess" \
-	--%{!?with_gnet:dis}%{?with_gnet:en}able-gnet \
+	--enable-gnet%{!?with_gnet:=no} \
 	--disable-silent-rules
 %{__make} \
 	%{!?with_info:INFO_DEPS=}
