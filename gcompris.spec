@@ -10,11 +10,11 @@ Version:	11.09
 Release:	2
 License:	GPL v3+
 Group:		X11/Applications/Games
-Source0:	http://downloads.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
+Source0:	https://downloads.sourceforge.net/gcompris/%{name}-%{version}.tar.gz
 # Source0-md5:	b0066d5e0bb4e2fbb7380f723b51c598
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-desktop.patch
-URL:		http://gcompris.net/
+URL:		https://gcompris.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-tools
