@@ -107,9 +107,7 @@ Warto ją instalować tylko jeśli mamy dzieci używające komputera.
 %package data
 Summary:	GCompris data files
 Group:		Applications/Games
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description data
 GCompris data files.
@@ -118,9 +116,7 @@ GCompris data files.
 Summary:	GCompris voices in Afrikaans
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-af
 Voice samples for the GCompris games in Afrikaans.
@@ -129,9 +125,7 @@ Voice samples for the GCompris games in Afrikaans.
 Summary:	GCompris voices in Arabic (Tunisia)
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-ar
 Voice samples for the GCompris games in Arabic (Tunisia).
@@ -140,9 +134,7 @@ Voice samples for the GCompris games in Arabic (Tunisia).
 Summary:	GCompris voices in Asturian
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-ast
 Voice samples for the GCompris games in Asturian.
@@ -151,9 +143,7 @@ Voice samples for the GCompris games in Asturian.
 Summary:	GCompris voices in Bulgarian
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-bg
 Voice samples for the GCompris games in Bulgarian.
@@ -162,9 +152,7 @@ Voice samples for the GCompris games in Bulgarian.
 Summary:	GCompris voices in Breton
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-br
 Voice samples for the GCompris games in Breton.
@@ -173,9 +161,7 @@ Voice samples for the GCompris games in Breton.
 Summary:	GCompris voices in Tsjech
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-cs
 Voice samples for the GCompris games in Tsjech.
@@ -184,9 +170,7 @@ Voice samples for the GCompris games in Tsjech.
 Summary:	GCompris voices in Danish
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-da
 Voice samples for the GCompris games in Danish.
@@ -195,9 +179,7 @@ Voice samples for the GCompris games in Danish.
 Summary:	GCompris voices in German
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-de
 Voice samples for the GCompris games in German.
@@ -206,9 +188,7 @@ Voice samples for the GCompris games in German.
 Summary:	GCompris voices in Greek
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-el
 Voice samples for the GCompris games in Greek.
@@ -217,9 +197,7 @@ Voice samples for the GCompris games in Greek.
 Summary:	GCompris voices in English
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-en
 Voice samples for the GCompris games in English.
@@ -228,9 +206,7 @@ Voice samples for the GCompris games in English.
 Summary:	GCompris voices in Esperanto
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-eo
 Voice samples for the GCompris games in Esperanto.
@@ -239,9 +215,7 @@ Voice samples for the GCompris games in Esperanto.
 Summary:	GCompris voices in Spanish
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-es
 Voice samples for the GCompris games in Spanish.
@@ -250,9 +224,7 @@ Voice samples for the GCompris games in Spanish.
 Summary:	GCompris voices in Basque
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-eu
 Voice samples for the GCompris games in Basque.
@@ -261,9 +233,7 @@ Voice samples for the GCompris games in Basque.
 Summary:	GCompris voices in Finish
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-fi
 Voice samples for the GCompris games in Finish.
@@ -281,9 +251,7 @@ Voice samples for the GCompris games in French.
 Summary:	GCompris voices in Scottish Gaelic
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-gd
 Voice samples for the GCompris games in Scottish Gaelic.
@@ -292,9 +260,7 @@ Voice samples for the GCompris games in Scottish Gaelic.
 Summary:	GCompris voices in Hebrew
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-he
 Voice samples for the GCompris games in Hebrew.
@@ -303,9 +269,7 @@ Voice samples for the GCompris games in Hebrew.
 Summary:	GCompris voices in Hindi
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-hi
 Voice samples for the GCompris games in Hindi.
@@ -314,9 +278,7 @@ Voice samples for the GCompris games in Hindi.
 Summary:	GCompris voices in Hungarian
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-hu
 Voice samples for the GCompris games in Hungarian.
@@ -325,9 +287,7 @@ Voice samples for the GCompris games in Hungarian.
 Summary:	GCompris voices in Indonesian
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-id
 Voice samples for the GCompris games in Indonesian.
@@ -336,9 +296,7 @@ Voice samples for the GCompris games in Indonesian.
 Summary:	GCompris voices in Italian
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-it
 Voice samples for the GCompris games in Italian.
@@ -347,9 +305,7 @@ Voice samples for the GCompris games in Italian.
 Summary:	GCompris voices in Lithuanian
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-lt
 Voice samples for the GCompris games in Lithuanian.
@@ -358,9 +314,7 @@ Voice samples for the GCompris games in Lithuanian.
 Summary:	GCompris voices in Indian Marathi
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-mr
 Voice samples for the GCompris games in Indian Marathi.
@@ -369,9 +323,7 @@ Voice samples for the GCompris games in Indian Marathi.
 Summary:	GCompris voices in Norwegian
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-nb
 Voice samples for the GCompris games in Norwegian.
@@ -380,9 +332,7 @@ Voice samples for the GCompris games in Norwegian.
 Summary:	GCompris voices in Dutch
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-nl
 Voice samples for the GCompris games in Dutch.
@@ -391,9 +341,7 @@ Voice samples for the GCompris games in Dutch.
 Summary:	GCompris voices in Norwegian Nynorsk
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-nn
 Voice samples for the GCompris games in Norwegian Nynorsk.
@@ -402,9 +350,7 @@ Voice samples for the GCompris games in Norwegian Nynorsk.
 Summary:	GCompris voices in Punjabi
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-pa
 Voice samples for the GCompris games in Punjabi.
@@ -413,9 +359,7 @@ Voice samples for the GCompris games in Punjabi.
 Summary:	GCompris voices in Portuguese
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-pt
 Voice samples for the GCompris games in Portuguese.
@@ -424,9 +368,7 @@ Voice samples for the GCompris games in Portuguese.
 Summary:	GCompris voices in Russian
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-ru
 Voice samples for the GCompris games in Russian.
@@ -435,9 +377,7 @@ Voice samples for the GCompris games in Russian.
 Summary:	GCompris voices in Slovak
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-sk
 Voice samples for the GCompris games in Slovak.
@@ -446,9 +386,7 @@ Voice samples for the GCompris games in Slovak.
 Summary:	GCompris voices in Slovenian
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-sl
 Voice samples for the GCompris games in Slovenian.
@@ -457,9 +395,7 @@ Voice samples for the GCompris games in Slovenian.
 Summary:	GCompris voices in Somali
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-so
 Voice samples for the GCompris games in Somali.
@@ -468,9 +404,7 @@ Voice samples for the GCompris games in Somali.
 Summary:	GCompris voices in Serbian
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-sr
 Voice samples for the GCompris games in Serbian.
@@ -479,9 +413,7 @@ Voice samples for the GCompris games in Serbian.
 Summary:	GCompris voices in Swedish
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-sv
 Voice samples for the GCompris games in Swedish.
@@ -489,9 +421,7 @@ Voice samples for the GCompris games in Swedish.
 %package sound-th
 Summary:	GCompris voices in Thai
 Group:		Applications/Games
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-th
 Voice samples for the GCompris games in Thai.
@@ -499,9 +429,7 @@ Voice samples for the GCompris games in Thai.
 %package sound-tr
 Summary:	GCompris voices in Turk
 Group:		Applications/Games
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-tr
 Voice samples for the GCompris games in Turk.
@@ -509,9 +437,7 @@ Voice samples for the GCompris games in Turk.
 %package sound-ur
 Summary:	GCompris voices in Urdu
 Group:		Applications/Games
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-ur
 Voice samples for the GCompris games in Urdu.
@@ -519,9 +445,7 @@ Voice samples for the GCompris games in Urdu.
 %package sound-zh_CN
 Summary:	GCompris voices in Chinese, Simplified
 Group:		Applications/Games
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description sound-zh_CN
 Voice samples for the GCompris games in Chinese, Simplified.
